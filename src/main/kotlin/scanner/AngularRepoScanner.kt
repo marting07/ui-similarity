@@ -25,25 +25,38 @@ class AngularRepoScanner : FrameworkRepoScanner {
                 val config = parseComponentConfig(file)
                 for (className in config.classNames) {
                     val key = ComponentKey(repoId, relTs.toString().replace("\\", "/"), className)
-                    val templatePath = config.templateUrl?.let { file.parentFile.toPath().resolve(it).normalize() } ?: relTs
-                    val stylePaths = if (config.styleUrls.isNotEmpty()) {
-                        config.styleUrls.map { file.parentFile.toPath().resolve(it).normalize() }
-                    } else {
-                        // Default convention: .component.css or .component.scss next to .component.ts
-                        val stem = file.nameWithoutExtension
-                        val base = File(file.parentFile, "$stem.css")
-                        val scss = File(file.parentFile, "$stem.scss")
-                        listOf(base, scss).filter { it.exists() }.map { it.toPath() }
-                    }
-                    result += ComponentSourceRef(
-                        key = key,
-                        framework = UiFramework.ANGULAR,
-                        repoRoot = repoRoot,
-                        templatePath = repoRoot.relativize(templatePath),
-                        stylePaths = stylePaths.map { repoRoot.relativize(it) },
-                        logicPath = relTs
-                    )
+                val templatePath = config.templateUrl?.let { file.parentFile.toPath().resolve(it).normalize() } ?: relTs
+                val stylePaths = if (config.styleUrls.isNotEmpty()) {
+                    config.styleUrls.map { file.parentFile.toPath().resolve(it).normalize() }
+                } else {
+                    // Default convention: .component.css or .component.scss next to .component.ts
+                    val stem = file.nameWithoutExtension
+                    val base = File(file.parentFile, "$stem.css")
+                    val scss = File(file.parentFile, "$stem.scss")
+                    listOf(base, scss).filter { it.exists() }.map { it.toPath() }
                 }
+                val repoRootAbs = repoRoot.toAbsolutePath().normalize()
+                val templateRel = if (templatePath.isAbsolute) {
+                    repoRootAbs.relativize(templatePath.toAbsolutePath().normalize())
+                } else {
+                    templatePath
+                }
+                val styleRelPaths = stylePaths.map { path ->
+                    if (path.isAbsolute) {
+                        repoRootAbs.relativize(path.toAbsolutePath().normalize())
+                    } else {
+                        path
+                    }
+                }
+                result += ComponentSourceRef(
+                    key = key,
+                    framework = UiFramework.ANGULAR,
+                    repoRoot = repoRoot,
+                    templatePath = templateRel,
+                    stylePaths = styleRelPaths,
+                    logicPath = relTs
+                )
+            }
             }
         return result
     }

@@ -31,6 +31,26 @@ operations (e.g. cloning from GitHub) are not performed directly in this codebas
 the architecture anticipates an external discovery/cloning step to populate
 `/data/repos/…` before running the scanner.
 
+## Running
+
+If you have Kotlin CLI installed, you can run the compiled classes produced by IntelliJ:
+
+```bash
+kotlin -classpath out/production/ui-similarity MainKt --repos /data/repos
+```
+
+If you only have `java`, add the Kotlin standard library to the classpath:
+
+```bash
+java -cp "out/production/ui-similarity:/path/to/kotlin-stdlib.jar" MainKt --repos /data/repos
+```
+
+You can locate `kotlin-stdlib.jar` on macOS with:
+
+```bash
+find /usr/local /opt/homebrew -name "kotlin-stdlib.jar" 2>/dev/null | head -n 1
+```
+
 **Note:** This project uses Kotlin for its implementation.  The code files provided here
 represent a self‑contained library and CLI, but compilation and execution are not
 performed within this environment.  Researchers can download the source, set up a
