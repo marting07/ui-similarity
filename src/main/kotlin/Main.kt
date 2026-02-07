@@ -43,16 +43,24 @@ fun main(args: Array<String>) {
     val compositeScanner = CompositeRepoScanner(scanners)
     val sourceRefs = mutableListOf<ComponentSourceRef>()
     // Iterate over subdirectories in the repos directory
+    val frameworkDirs = setOf("react", "angular", "vue")
     for (repoFolder in reposDir.listFiles() ?: emptyArray()) {
         if (repoFolder.isDirectory) {
-            // Derive a RepoId from the folder structure: host/owner/name
             val parts = repoFolder.relativeTo(reposDir).path.split(File.separator).filter { it.isNotEmpty() }
-            if (parts.size >= 3) {
-                val repoId = RepoId(parts[0], parts[1], parts.drop(2).joinToString("/"))
-                val refs = compositeScanner.scanRepo(repoId, repoFolder.toPath())
-                println("Scanned ${refs.size} components from ${repoId}")
-                sourceRefs += refs
+            if (parts.isEmpty()) continue
+            // Support both layouts:
+            // 1) /repos/<framework>/<owner>/<repo> -> host=github.com
+            // 2) /repos/<host>/<owner>/<repo>
+            val (repoId, repoRoot) = if (parts[0] in frameworkDirs && parts.size >= 3) {
+                RepoId("github.com", parts[1], parts.drop(2).joinToString("/")) to repoFolder
+            } else if (parts.size >= 3) {
+                RepoId(parts[0], parts[1], parts.drop(2).joinToString("/")) to repoFolder
+            } else {
+                continue
             }
+            val refs = compositeScanner.scanRepo(repoId, repoRoot.toPath())
+            println("Scanned ${refs.size} components from ${repoId}")
+            sourceRefs += refs
         }
     }
     // Feature extractors
