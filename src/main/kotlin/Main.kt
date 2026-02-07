@@ -17,6 +17,7 @@ import scanner.CompositeRepoScanner
 import scanner.ReactRepoScanner
 import scanner.VueRepoScanner
 import java.io.File
+import java.nio.file.Path
 import kotlin.random.Random
 
 /**
@@ -44,25 +45,29 @@ fun main(args: Array<String>) {
     val sourceRefs = mutableListOf<ComponentSourceRef>()
     // Iterate over subdirectories in the repos directory
     val frameworkDirs = setOf("react", "angular", "vue")
-    for (repoFolder in reposDir.listFiles() ?: emptyArray()) {
-        if (repoFolder.isDirectory) {
-            val parts = repoFolder.relativeTo(reposDir).path.split(File.separator).filter { it.isNotEmpty() }
-            if (parts.isEmpty()) continue
+    val visitedRoots = mutableSetOf<Path>()
+    // Discover repo roots by locating .git directories, then derive RepoId from path parts.
+    reposDir.walkTopDown()
+        .filter { it.isDirectory && it.name == ".git" }
+        .forEach { gitDir ->
+            val repoRoot = gitDir.parentFile ?: return@forEach
+            if (!visitedRoots.add(repoRoot.toPath())) return@forEach
+            val parts = repoRoot.relativeTo(reposDir).path.split(File.separator).filter { it.isNotEmpty() }
+            if (parts.isEmpty()) return@forEach
             // Support both layouts:
             // 1) /repos/<framework>/<owner>/<repo> -> host=github.com
             // 2) /repos/<host>/<owner>/<repo>
-            val (repoId, repoRoot) = if (parts[0] in frameworkDirs && parts.size >= 3) {
-                RepoId("github.com", parts[1], parts.drop(2).joinToString("/")) to repoFolder
+            val repoId = if (parts[0] in frameworkDirs && parts.size >= 3) {
+                RepoId("github.com", parts[1], parts.drop(2).joinToString("/"))
             } else if (parts.size >= 3) {
-                RepoId(parts[0], parts[1], parts.drop(2).joinToString("/")) to repoFolder
+                RepoId(parts[0], parts[1], parts.drop(2).joinToString("/"))
             } else {
-                continue
+                return@forEach
             }
             val refs = compositeScanner.scanRepo(repoId, repoRoot.toPath())
             println("Scanned ${refs.size} components from ${repoId}")
             sourceRefs += refs
         }
-    }
     // Feature extractors
     val extractor = ComponentSignatureExtractor(
         domExtractor = SimpleDomFeatureExtractor(),
@@ -82,12 +87,16 @@ fun main(args: Array<String>) {
     }
     val corpus = ComponentCorpus(records)
     println("Total components processed: ${corpus.records.size}")
+    if (corpus.records.isEmpty()) {
+        println("No components found; check repo path and scanner expectations.")
+        return
+    }
     // Create train/query split (80/20)
     val split = createRandomSplit(corpus, 0.8, seed = 42)
     println("Train size: ${split.train.records.size}, Query size: ${split.query.records.size}")
     // Build permutation index on training set
     val distance = ComponentDistance()
-    val pivotCount = 16
+    val pivotCount = minOf(16, split.train.records.size)
     val pivots = PivotSelector.randomPivots(split.train.signatures(), pivotCount, Random(42))
     val index = PermutationIndex(pivots, distance)
     index.build(split.train.signatures())
