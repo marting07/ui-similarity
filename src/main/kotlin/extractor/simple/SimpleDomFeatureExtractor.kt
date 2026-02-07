@@ -17,6 +17,16 @@ class SimpleDomFeatureExtractor : DomFeatureExtractor {
 
     override fun extractDomFeatures(source: ComponentSource): DomFeatures {
         val code = source.templateCode
+        fun countOccurrences(haystack: String, needle: String): Int {
+            var count = 0
+            var index = 0
+            while (true) {
+                index = haystack.indexOf(needle, index)
+                if (index == -1) return count
+                count++
+                index += needle.length
+            }
+        }
         // Count tags
         val tagCounts = mutableMapOf<String, Int>()
         for (match in tagRegex.findAll(code)) {
@@ -30,14 +40,14 @@ class SimpleDomFeatureExtractor : DomFeatureExtractor {
             roleCounts[role] = (roleCounts[role] ?: 0) + 1
         }
         // Estimate depth and branching using simple indentation heuristics
-        val lines = code.lines()
+        val lines = code.lineSequence()
         var currentDepth = 0
         var maxDepth = 1
         var totalChildren = 0
         var parentCount = 0
         for (line in lines) {
-            val open = "<".toRegex().findAll(line).count()
-            val close = "</".toRegex().findAll(line).count()
+            val open = countOccurrences(line, "<")
+            val close = countOccurrences(line, "</")
             currentDepth += open
             if (currentDepth > maxDepth) maxDepth = currentDepth
             if (open > 0) {
