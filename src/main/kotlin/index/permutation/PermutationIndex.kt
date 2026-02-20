@@ -63,12 +63,13 @@ class PermutationIndex(
      * results are returned.
      */
     fun querySimilar(query: ComponentSignature, k: Int = 10, topN: Int = 20): List<Pair<String, Double>> {
-        val queryPerm = computePermutation(query).orderedPivotIds.take(k).toSet()
+        val effectiveK = minOf(k, pivots.size).coerceAtLeast(0)
+        val queryPerm = computePermutation(query).orderedPivotIds.take(effectiveK).toSet()
         val scores = mutableListOf<Pair<String, Double>>()
         for ((id, perm) in index) {
-            val candidateTop = perm.orderedPivotIds.take(k).toSet()
+            val candidateTop = perm.orderedPivotIds.take(effectiveK).toSet()
             val inter = queryPerm.intersect(candidateTop).size.toDouble()
-            val sim = if (k > 0) inter / k.toDouble() else 0.0
+            val sim = if (effectiveK > 0) inter / effectiveK.toDouble() else 0.0
             scores += id to sim
         }
         return scores.sortedByDescending { it.second }.take(topN)

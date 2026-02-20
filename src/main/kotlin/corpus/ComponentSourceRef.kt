@@ -15,7 +15,9 @@ data class ComponentSourceRef(
     val repoRoot: Path,
     val templatePath: Path,
     val stylePaths: List<Path>,
-    val logicPath: Path
+    val logicPath: Path,
+    val inlineTemplateCode: String? = null,
+    val inlineStyleCodes: List<String> = emptyList()
 ) {
     /**
      * Returns the absolute path to the template file by resolving it

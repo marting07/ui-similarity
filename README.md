@@ -56,3 +56,19 @@ represent a self‑contained library and CLI, but compilation and execution are 
 performed within this environment.  Researchers can download the source, set up a
 Gradle project with the Kotlin standard library, and run the CLI on a corpus of
 repositories on their own machines.
+
+## Fast Local Tests (Small Fixtures)
+
+To validate scanner, source loading and feature extraction steps quickly with tiny
+fixtures, run:
+
+```bash
+bash scripts/run-tests.sh
+```
+
+This compiles `src/main/kotlin` + `src/test/kotlin` with `kotlinc` and executes
+`RunAllTestsKt`.  The suite is intentionally lightweight and does not depend on the
+large `data/repos` corpus.
+
+CI runs the same command on every push and pull request via
+`.github/workflows/tests.yml`.
