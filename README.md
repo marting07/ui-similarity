@@ -39,6 +39,31 @@ If you have Kotlin CLI installed, you can run the compiled classes produced by I
 kotlin -classpath out/production/ui-similarity MainKt --repos /data/repos
 ```
 
+You can also select scanner mode:
+
+```bash
+kotlin -classpath out/production/ui-similarity MainKt --repos /data/repos --mode hybrid
+```
+
+Current status: `ast`/`hybrid` mode introduces a React AST scanner adapter scaffold.
+Until a concrete AST engine is wired, it falls back to the existing React scanner path.
+
+To wire an external React AST parser, set `UI_SIMILARITY_REACT_AST_CMD` to a command
+that reads one JSON request from stdin and prints one JSON response to stdout.
+The current request/response contract lives in:
+`/Users/marting/Documents/Papers/ui-similarity-project/ui-similarity/src/main/kotlin/scanner/ReactAstContract.kt`.
+For Angular, use `UI_SIMILARITY_ANGULAR_AST_CMD` with the contract in
+`/Users/marting/Documents/Papers/ui-similarity-project/ui-similarity/src/main/kotlin/scanner/AngularAstContract.kt`.
+
+Default behavior now uses the bundled command:
+`node scripts/react-ast-scan.mjs`.
+This is an offline lightweight parser for React exports/style imports; it is a bridge
+step until full TypeScript AST parser tooling is available.
+Angular uses `node scripts/angular-ast-scan.mjs` with the same bridge approach.
+TODO (when network is available): replace tokenizer logic in `scripts/react-ast-scan.mjs`
+with `typescript` AST parsing, keeping the same JSON contract in
+`src/main/kotlin/scanner/ReactAstContract.kt`.
+
 If you only have `java`, add the Kotlin standard library to the classpath:
 
 ```bash
@@ -72,3 +97,8 @@ large `data/repos` corpus.
 
 CI runs the same command on every push and pull request via
 `.github/workflows/tests.yml`.
+
+## AST Roadmap
+
+The parser/AST migration plan (architecture, rollout phases, and testing strategy)
+is documented in `/Users/marting/Documents/Papers/ui-similarity-project/ui-similarity/docs/ast-migration-plan.md`.

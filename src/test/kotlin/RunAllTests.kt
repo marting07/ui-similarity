@@ -1,13 +1,22 @@
+import tests.AngularAstContractTests
+import tests.AstModeSmokeTests
 import tests.ExtractorTests
 import tests.CorpusTests
+import tests.HybridModeSmokeTests
 import tests.IndexTests
 import tests.PipelineSmokeTests
+import tests.ReactAstContractTests
 import tests.ScannerTests
 import tests.SimilarityTests
 import tests.SourceLoaderTests
 
 fun main() {
     val suites = listOf(
+        "MainCliTests" to MainCliTests.run(),
+        "ReactAstContractTests" to ReactAstContractTests.run(),
+        "AngularAstContractTests" to AngularAstContractTests.run(),
+        "AstModeSmokeTests" to AstModeSmokeTests.run(),
+        "HybridModeSmokeTests" to HybridModeSmokeTests.run(),
         "ScannerTests" to ScannerTests.run(),
         "SourceLoaderTests" to SourceLoaderTests.run(),
         "ExtractorTests" to ExtractorTests.run(),
