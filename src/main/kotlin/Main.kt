@@ -12,11 +12,11 @@ import extractor.simple.SimpleCssFeatureExtractor
 import extractor.simple.SimpleDomFeatureExtractor
 import index.permutation.PivotSelector
 import index.permutation.PermutationIndex
-import scanner.AngularRepoScanner
 import scanner.CompositeRepoScanner
-import scanner.ReactRepoScanner
-import scanner.VueRepoScanner
+import scanner.ExtractionMode
+import scanner.createFrameworkScanners
 import java.io.File
+import java.nio.file.Path
 import kotlin.random.Random
 
 /**
@@ -26,43 +26,50 @@ import kotlin.random.Random
  * construction, index building and similarity queries.  The results are
  * printed to standard output.
  *
- * Usage: `kt run MainKt --repos /data/repos`  (after compiling via Gradle)
+ * Usage: `kt run MainKt --repos /data/repos [--mode simple|ast|hybrid]`
+ * (after compiling via Gradle)
  */
 fun main(args: Array<String>) {
-    if (args.size < 2 || args[0] != "--repos") {
-        println("Usage: MainKt --repos <path-to-repos>")
+    val config = parseCliConfig(args)
+    if (config == null) {
+        println("Usage: MainKt --repos <path-to-repos> [--mode simple|ast|hybrid]")
         return
     }
-    val reposDir = File(args[1])
+    val reposDir = config.reposDir
     if (!reposDir.exists() || !reposDir.isDirectory) {
         println("Repositories directory not found: ${reposDir.absolutePath}")
         return
     }
     // Set up scanners for each framework
-    val scanners = listOf(ReactRepoScanner(), AngularRepoScanner(), VueRepoScanner())
+    val scanners = createFrameworkScanners(config.mode)
     val compositeScanner = CompositeRepoScanner(scanners)
+    println("Extraction mode: ${config.mode.name.lowercase()}")
     val sourceRefs = mutableListOf<ComponentSourceRef>()
     // Iterate over subdirectories in the repos directory
     val frameworkDirs = setOf("react", "angular", "vue")
-    for (repoFolder in reposDir.listFiles() ?: emptyArray()) {
-        if (repoFolder.isDirectory) {
-            val parts = repoFolder.relativeTo(reposDir).path.split(File.separator).filter { it.isNotEmpty() }
-            if (parts.isEmpty()) continue
+    val visitedRoots = mutableSetOf<Path>()
+    // Discover repo roots by locating .git directories, then derive RepoId from path parts.
+    reposDir.walkTopDown()
+        .filter { it.isDirectory && it.name == ".git" }
+        .forEach { gitDir ->
+            val repoRoot = gitDir.parentFile ?: return@forEach
+            if (!visitedRoots.add(repoRoot.toPath())) return@forEach
+            val parts = repoRoot.relativeTo(reposDir).path.split(File.separator).filter { it.isNotEmpty() }
+            if (parts.isEmpty()) return@forEach
             // Support both layouts:
             // 1) /repos/<framework>/<owner>/<repo> -> host=github.com
             // 2) /repos/<host>/<owner>/<repo>
-            val (repoId, repoRoot) = if (parts[0] in frameworkDirs && parts.size >= 3) {
-                RepoId("github.com", parts[1], parts.drop(2).joinToString("/")) to repoFolder
+            val repoId = if (parts[0] in frameworkDirs && parts.size >= 3) {
+                RepoId("github.com", parts[1], parts.drop(2).joinToString("/"))
             } else if (parts.size >= 3) {
-                RepoId(parts[0], parts[1], parts.drop(2).joinToString("/")) to repoFolder
+                RepoId(parts[0], parts[1], parts.drop(2).joinToString("/"))
             } else {
-                continue
+                return@forEach
             }
             val refs = compositeScanner.scanRepo(repoId, repoRoot.toPath())
             println("Scanned ${refs.size} components from ${repoId}")
             sourceRefs += refs
         }
-    }
     // Feature extractors
     val extractor = ComponentSignatureExtractor(
         domExtractor = SimpleDomFeatureExtractor(),
@@ -82,12 +89,16 @@ fun main(args: Array<String>) {
     }
     val corpus = ComponentCorpus(records)
     println("Total components processed: ${corpus.records.size}")
+    if (corpus.records.isEmpty()) {
+        println("No components found; check repo path and scanner expectations.")
+        return
+    }
     // Create train/query split (80/20)
     val split = createRandomSplit(corpus, 0.8, seed = 42)
     println("Train size: ${split.train.records.size}, Query size: ${split.query.records.size}")
     // Build permutation index on training set
     val distance = ComponentDistance()
-    val pivotCount = 16
+    val pivotCount = minOf(16, split.train.records.size)
     val pivots = PivotSelector.randomPivots(split.train.signatures(), pivotCount, Random(42))
     val index = PermutationIndex(pivots, distance)
     index.build(split.train.signatures())
@@ -97,6 +108,40 @@ fun main(args: Array<String>) {
         println("Query: ${record.id}")
         neighbors.forEach { (id, score) -> println("  $id: ${String.format("%.2f", score)}") }
     }
+}
+
+data class CliConfig(
+    val reposDir: File,
+    val mode: ExtractionMode
+)
+
+fun parseCliConfig(args: Array<String>): CliConfig? {
+    if (args.isEmpty()) return null
+    var reposPath: String? = null
+    var mode = ExtractionMode.SIMPLE
+    var i = 0
+    while (i < args.size) {
+        when (args[i]) {
+            "--repos" -> {
+                if (i + 1 >= args.size) return null
+                reposPath = args[i + 1]
+                i += 2
+            }
+            "--mode" -> {
+                if (i + 1 >= args.size) return null
+                mode = try {
+                    ExtractionMode.fromCli(args[i + 1])
+                } catch (e: IllegalArgumentException) {
+                    println(e.message)
+                    return null
+                }
+                i += 2
+            }
+            else -> return null
+        }
+    }
+    val path = reposPath ?: return null
+    return CliConfig(reposDir = File(path), mode = mode)
 }
 
 /**

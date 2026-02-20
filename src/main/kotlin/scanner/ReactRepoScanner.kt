@@ -6,7 +6,6 @@ import corpus.RepoId
 import core.model.UiFramework
 import java.io.File
 import java.nio.file.Path
-import java.util.regex.Pattern
 
 /**
  * Scans a React project for components by searching for TSX/JSX files in
@@ -60,7 +59,7 @@ class ReactRepoScanner : FrameworkRepoScanner {
         val defaultFuncRegex = Regex("export\\s+default\\s+function\\s+([A-Za-z0-9_]+)")
         defaultFuncRegex.findAll(code).forEach { names += it.groupValues[1] }
         // export default Name;
-        val defaultAssignRegex = Regex("export\\s+default\\s+([A-Za-z0-9_]+)")
+        val defaultAssignRegex = Regex("export\\s+default\\s+(?!function\\b|class\\b)([A-Za-z0-9_]+)\\b")
         defaultAssignRegex.findAll(code).forEach { names += it.groupValues[1] }
         return names.toList()
     }

@@ -1,0 +1,6 @@
+{
+  "name": "sample-react",
+  "dependencies": {
+    "react": "18.0.0"
+  }
+}
