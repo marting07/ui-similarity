@@ -9,7 +9,7 @@ import tests.TestSupport.assertTrue
 object AstModeSmokeTests {
     fun run(): List<Pair<String, Throwable?>> {
         return listOf(
-            TestSupport.test("AST mode scanner factory extracts React and Angular fixtures") {
+            TestSupport.test("AST mode scanner factory extracts React Angular and Vue fixtures") {
                 val composite = CompositeRepoScanner(createFrameworkScanners(ExtractionMode.AST))
 
                 val reactRefs = composite.scanRepo(
@@ -27,7 +27,7 @@ object AstModeSmokeTests {
 
                 assertTrue(reactRefs.isNotEmpty(), "AST mode should extract React components via AST bridge")
                 assertTrue(angularRefs.isNotEmpty(), "AST mode should extract Angular components via AST bridge")
-                assertTrue(vueRefs.isNotEmpty(), "AST mode should still extract Vue components")
+                assertTrue(vueRefs.isNotEmpty(), "AST mode should extract Vue components via AST bridge")
             }
         )
     }

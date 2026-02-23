@@ -30,54 +30,6 @@ function toRelativePosix(root, file) {
   return path.relative(root, file).split(path.sep).join('/');
 }
 
-function parseClassNames(text) {
-  const names = [];
-  const regex = /(?:export\s+)?class\s+([A-Za-z_][A-Za-z0-9_]*)/g;
-  let m;
-  while ((m = regex.exec(text)) !== null) names.push(m[1]);
-  return Array.from(new Set(names));
-}
-
-function parseTemplateUrl(text) {
-  const m = text.match(/templateUrl\s*:\s*['\"]([^'\"]+)['\"]/);
-  return m ? m[1] : null;
-}
-
-function parseInlineTemplate(text) {
-  const m1 = text.match(/template\s*:\s*`([\s\S]*?)`/);
-  if (m1) return m1[1];
-  const m2 = text.match(/template\s*:\s*'([^']*)'/);
-  if (m2) return m2[1];
-  const m3 = text.match(/template\s*:\s*\"([^\"]*)\"/);
-  if (m3) return m3[1];
-  return null;
-}
-
-function parseStyleUrls(text) {
-  const m = text.match(/styleUrls\s*:\s*\[([\s\S]*?)\]/);
-  if (!m) return [];
-  const arr = m[1];
-  const quoteRegex = /['\"]([^'\"]+)['\"]/g;
-  const out = [];
-  let qm;
-  while ((qm = quoteRegex.exec(arr)) !== null) out.push(qm[1]);
-  return out;
-}
-
-function parseInlineStyles(text) {
-  const m = text.match(/styles\s*:\s*\[([\s\S]*?)\]/);
-  if (!m) return [];
-  const arr = m[1];
-  const itemRegex = /`([\s\S]*?)`|'([^']*)'|\"([^\"]*)\"/g;
-  const out = [];
-  let im;
-  while ((im = itemRegex.exec(arr)) !== null) {
-    const value = im[1] || im[2] || im[3] || '';
-    if (value.length > 0) out.push(value);
-  }
-  return out;
-}
-
 function resolveRelative(baseFileRel, spec) {
   const dir = path.posix.dirname(baseFileRel);
   return path.posix.normalize(path.posix.join(dir, spec));
@@ -94,37 +46,200 @@ function defaultStyleCandidates(repoRoot, relativePath) {
   return candidates.filter((rel) => fs.existsSync(path.join(repoRoot, rel)));
 }
 
-function scanAngularRepo(repoRoot) {
+async function loadTypeScript() {
+  try {
+    const mod = await import('typescript');
+    return mod.default || mod;
+  } catch {
+    return null;
+  }
+}
+
+function parseClassNamesRegex(text) {
+  const names = [];
+  const regex = /(?:export\s+)?class\s+([A-Za-z_][A-Za-z0-9_]*)/g;
+  let m;
+  while ((m = regex.exec(text)) !== null) names.push(m[1]);
+  return Array.from(new Set(names));
+}
+
+function parseTemplateUrlRegex(text) {
+  const m = text.match(/templateUrl\s*:\s*['\"]([^'\"]+)['\"]/);
+  return m ? m[1] : null;
+}
+
+function parseInlineTemplateRegex(text) {
+  const m1 = text.match(/template\s*:\s*`([\s\S]*?)`/);
+  if (m1) return m1[1];
+  const m2 = text.match(/template\s*:\s*'([^']*)'/);
+  if (m2) return m2[1];
+  const m3 = text.match(/template\s*:\s*\"([^\"]*)\"/);
+  if (m3) return m3[1];
+  return null;
+}
+
+function parseStyleUrlsRegex(text) {
+  const m = text.match(/styleUrls\s*:\s*\[([\s\S]*?)\]/);
+  if (!m) return [];
+  const arr = m[1];
+  const quoteRegex = /['\"]([^'\"]+)['\"]/g;
+  const out = [];
+  let qm;
+  while ((qm = quoteRegex.exec(arr)) !== null) out.push(qm[1]);
+  return out;
+}
+
+function parseInlineStylesRegex(text) {
+  const m = text.match(/styles\s*:\s*\[([\s\S]*?)\]/);
+  if (!m) return [];
+  const arr = m[1];
+  const itemRegex = /`([\s\S]*?)`|'([^']*)'|\"([^\"]*)\"/g;
+  const out = [];
+  let im;
+  while ((im = itemRegex.exec(arr)) !== null) {
+    const value = im[1] || im[2] || im[3] || '';
+    if (value.length > 0) out.push(value);
+  }
+  return out;
+}
+
+function parseAngularFileRegex(text) {
+  return {
+    classNames: parseClassNamesRegex(text),
+    templateUrl: parseTemplateUrlRegex(text),
+    inlineTemplate: parseInlineTemplateRegex(text),
+    styleUrls: parseStyleUrlsRegex(text),
+    inlineStyles: parseInlineStylesRegex(text)
+  };
+}
+
+function stringFromExpression(ts, expr) {
+  if (!expr) return null;
+  if (ts.isStringLiteral(expr) || ts.isNoSubstitutionTemplateLiteral(expr)) {
+    return expr.text;
+  }
+  if (ts.isTemplateExpression(expr)) {
+    return expr.getText().slice(1, -1);
+  }
+  return null;
+}
+
+function stringArrayFromExpression(ts, expr) {
+  if (!expr || !ts.isArrayLiteralExpression(expr)) return [];
+  const out = [];
+  for (const el of expr.elements) {
+    const value = stringFromExpression(ts, el);
+    if (typeof value === 'string' && value.length > 0) out.push(value);
+  }
+  return out;
+}
+
+function getComponentObjectLiteral(ts, classDecl) {
+  for (const mod of classDecl.modifiers || []) {
+    if (!ts.isDecorator(mod)) continue;
+    const expr = mod.expression;
+    if (!ts.isCallExpression(expr)) continue;
+    if (!ts.isIdentifier(expr.expression) || expr.expression.text !== 'Component') continue;
+    const arg = expr.arguments[0];
+    if (arg && ts.isObjectLiteralExpression(arg)) return arg;
+  }
+  return null;
+}
+
+function findFirstComponentConfigTs(ts, sourceFile) {
+  for (const stmt of sourceFile.statements) {
+    if (!ts.isClassDeclaration(stmt)) continue;
+    const obj = getComponentObjectLiteral(ts, stmt);
+    if (!obj) continue;
+
+    let templateUrl = null;
+    let inlineTemplate = null;
+    let styleUrls = [];
+    let inlineStyles = [];
+
+    for (const prop of obj.properties) {
+      if (!ts.isPropertyAssignment(prop)) continue;
+      if (!ts.isIdentifier(prop.name)) continue;
+      const key = prop.name.text;
+      if (key === 'templateUrl') {
+        templateUrl = stringFromExpression(ts, prop.initializer);
+      } else if (key === 'template') {
+        inlineTemplate = stringFromExpression(ts, prop.initializer);
+      } else if (key === 'styleUrls') {
+        styleUrls = stringArrayFromExpression(ts, prop.initializer);
+      } else if (key === 'styles') {
+        inlineStyles = stringArrayFromExpression(ts, prop.initializer);
+      }
+    }
+
+    return { templateUrl, inlineTemplate, styleUrls, inlineStyles };
+  }
+  return { templateUrl: null, inlineTemplate: null, styleUrls: [], inlineStyles: [] };
+}
+
+function parseAngularFileTs(ts, text, filePath) {
+  const sourceFile = ts.createSourceFile(
+    filePath,
+    text,
+    ts.ScriptTarget.Latest,
+    true,
+    ts.ScriptKind.TS
+  );
+
+  const classNames = [];
+  for (const stmt of sourceFile.statements) {
+    if (ts.isClassDeclaration(stmt) && stmt.name) {
+      classNames.push(stmt.name.text);
+    }
+  }
+
+  const cfg = findFirstComponentConfigTs(ts, sourceFile);
+  return {
+    // Keep scanner parity with legacy regex behavior by merging regex-derived class names.
+    classNames: Array.from(new Set([...classNames, ...parseClassNamesRegex(text)])),
+    templateUrl: cfg.templateUrl,
+    inlineTemplate: cfg.inlineTemplate,
+    styleUrls: cfg.styleUrls,
+    inlineStyles: cfg.inlineStyles
+  };
+}
+
+function buildComponentDescriptors(repoRoot, relativePath, parsed) {
+  const components = [];
+  const templatePath = parsed.templateUrl ? resolveRelative(relativePath, parsed.templateUrl) : relativePath;
+  const resolvedStylePaths = parsed.styleUrls.length > 0
+    ? parsed.styleUrls.map((s) => resolveRelative(relativePath, s))
+    : (parsed.inlineStyles.length === 0 ? defaultStyleCandidates(repoRoot, relativePath) : []);
+
+  for (const className of parsed.classNames) {
+    components.push({
+      relativePath,
+      exportName: className,
+      templatePath,
+      logicPath: relativePath,
+      stylePaths: resolvedStylePaths,
+      inlineTemplateCode: parsed.inlineTemplate,
+      inlineStyleCodes: parsed.inlineStyles
+    });
+  }
+
+  return components;
+}
+
+async function scanAngularRepo(repoRoot) {
+  const ts = await loadTypeScript();
   const files = walkFiles(repoRoot);
   const components = [];
 
   for (const file of files) {
     const text = fs.readFileSync(file, 'utf8');
     const relativePath = toRelativePosix(repoRoot, file);
-    const classNames = parseClassNames(text);
-    if (classNames.length === 0) continue;
+    const parsed = ts
+      ? parseAngularFileTs(ts, text, file)
+      : parseAngularFileRegex(text);
 
-    const templateUrl = parseTemplateUrl(text);
-    const inlineTemplate = parseInlineTemplate(text);
-    const styleUrls = parseStyleUrls(text);
-    const inlineStyles = parseInlineStyles(text);
-
-    const templatePath = templateUrl ? resolveRelative(relativePath, templateUrl) : relativePath;
-    const resolvedStylePaths = styleUrls.length > 0
-      ? styleUrls.map((s) => resolveRelative(relativePath, s))
-      : (inlineStyles.length === 0 ? defaultStyleCandidates(repoRoot, relativePath) : []);
-
-    for (const className of classNames) {
-      components.push({
-        relativePath,
-        exportName: className,
-        templatePath,
-        logicPath: relativePath,
-        stylePaths: resolvedStylePaths,
-        inlineTemplateCode: inlineTemplate,
-        inlineStyleCodes: inlineStyles
-      });
-    }
+    if (!parsed.classNames || parsed.classNames.length === 0) continue;
+    components.push(...buildComponentDescriptors(repoRoot, relativePath, parsed));
   }
 
   return components;
@@ -139,7 +254,7 @@ async function main() {
       process.exit(1);
       return;
     }
-    const components = scanAngularRepo(request.repoRoot);
+    const components = await scanAngularRepo(request.repoRoot);
     console.log(JSON.stringify({ status: 'ok', components }));
   } catch (error) {
     console.log(JSON.stringify({

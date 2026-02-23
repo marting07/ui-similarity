@@ -60,9 +60,15 @@ object ReactAstContractJson {
     }
 
     private fun extractString(json: String, key: String): String? {
-        val regex = Regex("\"$key\"\\s*:\\s*\"((?:\\\\.|[^\"])*)\"")
-        val raw = regex.find(json)?.groupValues?.get(1) ?: return null
-        return unescape(raw)
+        val keyIndex = json.indexOf("\"$key\"")
+        if (keyIndex == -1) return null
+        val colon = json.indexOf(':', keyIndex + key.length + 2)
+        if (colon == -1) return null
+        var i = colon + 1
+        while (i < json.length && json[i].isWhitespace()) i++
+        if (i >= json.length || json[i] != '"') return null
+        val parsed = parseJsonString(json, i) ?: return null
+        return unescape(parsed.first)
     }
 
     private fun extractArrayBlock(json: String, key: String): String? {
@@ -86,8 +92,18 @@ object ReactAstContractJson {
 
     private fun extractStringArray(json: String, key: String): List<String> {
         val block = extractArrayBlock(json, key) ?: return emptyList()
-        val strRegex = Regex("\"((?:\\\\.|[^\"])*)\"")
-        return strRegex.findAll(block).map { unescape(it.groupValues[1]) }.toList()
+        val values = mutableListOf<String>()
+        var i = 0
+        while (i < block.length) {
+            if (block[i] == '"') {
+                val parsed = parseJsonString(block, i) ?: break
+                values += unescape(parsed.first)
+                i = parsed.second
+            } else {
+                i++
+            }
+        }
+        return values
     }
 
     private fun splitTopLevelObjects(arrayBody: String): List<String> {
@@ -125,5 +141,25 @@ object ReactAstContractJson {
             .replace("\\t", "\t")
             .replace("\\\"", "\"")
             .replace("\\\\", "\\")
+    }
+
+    private fun parseJsonString(text: String, startQuoteIndex: Int): Pair<String, Int>? {
+        if (startQuoteIndex < 0 || startQuoteIndex >= text.length || text[startQuoteIndex] != '"') return null
+        val out = StringBuilder()
+        var i = startQuoteIndex + 1
+        while (i < text.length) {
+            val ch = text[i]
+            if (ch == '\\') {
+                if (i + 1 >= text.length) return null
+                out.append('\\')
+                out.append(text[i + 1])
+                i += 2
+                continue
+            }
+            if (ch == '"') return out.toString() to (i + 1)
+            out.append(ch)
+            i++
+        }
+        return null
     }
 }

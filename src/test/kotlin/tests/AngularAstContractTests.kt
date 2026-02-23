@@ -3,6 +3,7 @@ package tests
 import corpus.RepoId
 import scanner.AngularAstContractJson
 import scanner.AngularAstScanRequest
+import scanner.AstScanOutcome
 import scanner.CommandAngularAstEngine
 import tests.TestSupport.assertContains
 import tests.TestSupport.assertEquals
@@ -56,8 +57,8 @@ object AngularAstContractTests {
                     RepoId("github.com", "acme", "repo"),
                     Fixtures.angularRepo
                 )
-                assertEquals(1, refs?.size, "Engine should return one mapped source ref")
-                val ref = refs!!.first()
+                assertTrue(refs is AstScanOutcome.Success, "Engine should return success outcome")
+                val ref = (refs as AstScanOutcome.Success).refs.first()
                 assertEquals("Widget", ref.key.exportName, "Export name should map to key")
                 assertEquals("src/app/Widget.component.ts", ref.logicPath.toString().replace('\\', '/'), "Logic path should map")
                 assertEquals(1, ref.stylePaths.size, "Style path list should map")
@@ -68,8 +69,10 @@ object AngularAstContractTests {
                     RepoId("github.com", "acme", "edge-angular"),
                     Fixtures.angularEdgeRepo
                 )
-                assertEquals(1, refs?.size, "Node Angular AST command should extract one component")
-                val ref = refs!!.first()
+                assertTrue(refs is AstScanOutcome.Success, "Node Angular AST command should return success outcome")
+                val components = (refs as AstScanOutcome.Success).refs
+                assertEquals(1, components.size, "Node Angular AST command should extract one component")
+                val ref = components.first()
                 assertEquals("FancyCard", ref.key.exportName, "Inline component class should be parsed")
                 assertTrue(ref.inlineTemplateCode?.contains("<section") == true, "Inline template should map")
                 assertTrue(ref.inlineStyleCodes.any { it.contains("margin: 6px") }, "Inline styles should map")

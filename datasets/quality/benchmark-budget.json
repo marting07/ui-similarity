@@ -1,0 +1,18 @@
+{
+  "default": {
+    "mean_ms_max": 250.0,
+    "p95_ms_max": 500.0
+  },
+  "overrides": {
+    "react.dom": { "mean_ms_max": 300.0, "p95_ms_max": 600.0 },
+    "angular.dom": { "mean_ms_max": 300.0, "p95_ms_max": 600.0 },
+    "vue.dom": { "mean_ms_max": 300.0, "p95_ms_max": 600.0 },
+    "react.css": { "mean_ms_max": 250.0, "p95_ms_max": 500.0 },
+    "angular.css": { "mean_ms_max": 250.0, "p95_ms_max": 500.0 },
+    "vue.css": { "mean_ms_max": 250.0, "p95_ms_max": 500.0 },
+    "react.behavior": { "mean_ms_max": 250.0, "p95_ms_max": 500.0 },
+    "angular.behavior": { "mean_ms_max": 250.0, "p95_ms_max": 500.0 },
+    "vue.behavior": { "mean_ms_max": 250.0, "p95_ms_max": 500.0 }
+  }
+}
+

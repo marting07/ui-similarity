@@ -4,9 +4,10 @@ import corpus.RepoId
 import scanner.AngularAstRepoScanner
 import scanner.CommandAngularAstEngine
 import scanner.CommandReactAstEngine
+import scanner.CommandVueAstEngine
 import scanner.CompositeRepoScanner
 import scanner.ReactAstRepoScanner
-import scanner.VueRepoScanner
+import scanner.VueAstRepoScanner
 import tests.TestSupport.assertTrue
 
 object HybridModeSmokeTests {
@@ -23,7 +24,10 @@ object HybridModeSmokeTests {
                             astEngine = CommandAngularAstEngine("exit 1"),
                             allowFallback = true
                         ),
-                        VueRepoScanner()
+                        VueAstRepoScanner(
+                            astEngine = CommandVueAstEngine("exit 1"),
+                            allowFallback = true
+                        )
                     )
                 )
 
@@ -42,7 +46,7 @@ object HybridModeSmokeTests {
 
                 assertTrue(reactRefs.isNotEmpty(), "React should fallback to legacy scanner when AST command fails")
                 assertTrue(angularRefs.isNotEmpty(), "Angular should fallback to legacy scanner when AST command fails")
-                assertTrue(vueRefs.isNotEmpty(), "Vue scanner should continue to work")
+                assertTrue(vueRefs.isNotEmpty(), "Vue should fallback to legacy scanner when AST command fails")
             }
         )
     }

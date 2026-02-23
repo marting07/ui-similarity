@@ -1,0 +1,19 @@
+{
+  "name": "ui-similarity",
+  "version": "1.0.0",
+  "description": "This project implements the complete pipeline outlined in the research plan for measuring similarity between web UI components.  It includes utilities for discovering and cloning open‑source repositories, scanning those repositories for React/Angular/Vue components, extracting multi‑layer feature representations (DOM structure, CSS styling and behavioural information), building a corpus, splitting the corpus into training and query sets, constructing a proximity index over the components, and running similarity queries.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.5.28",
+    "typescript": "^5.9.3"
+  }
+}

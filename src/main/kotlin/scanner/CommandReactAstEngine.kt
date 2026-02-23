@@ -16,7 +16,7 @@ class CommandReactAstEngine(
     private val timeoutSeconds: Long = 15L
 ) : ReactAstEngine {
 
-    override fun scanRepo(repoId: RepoId, repoRoot: Path): List<ComponentSourceRef>? {
+    override fun scanRepo(repoId: RepoId, repoRoot: Path): AstScanOutcome {
         val request = ReactAstScanRequest(
             repoHost = repoId.host,
             repoOwner = repoId.owner,
@@ -38,15 +38,18 @@ class CommandReactAstEngine(
             val finished = process.waitFor(timeoutSeconds, TimeUnit.SECONDS)
             if (!finished) {
                 process.destroyForcibly()
-                return null
+                return AstScanOutcome.Failure("timeout")
             }
 
             val output = process.inputStream.bufferedReader().readText()
-            if (process.exitValue() != 0) return null
+            if (process.exitValue() != 0) return AstScanOutcome.Failure("command_exit_nonzero")
 
-            val response = ReactAstContractJson.decodeResponse(output) ?: return null
-            if (response.status != "ok") return null
-            response.components.map { desc ->
+            val response = ReactAstContractJson.decodeResponse(output)
+                ?: return AstScanOutcome.Failure("invalid_response")
+            if (response.status != "ok") {
+                return AstScanOutcome.Failure("status_${response.status}${response.error?.let { "_${it}" } ?: ""}")
+            }
+            val refs = response.components.map { desc ->
                 val relativePath = desc.relativePath.normalizeRelPath()
                 ComponentSourceRef(
                     key = ComponentKey(repoId, relativePath, desc.exportName),
@@ -59,8 +62,9 @@ class CommandReactAstEngine(
                     inlineStyleCodes = desc.inlineStyleCodes
                 )
             }
-        } catch (_: Exception) {
-            null
+            AstScanOutcome.Success(refs)
+        } catch (e: Exception) {
+            AstScanOutcome.Failure("exception_${e::class.simpleName ?: "unknown"}")
         }
     }
 

@@ -2,3 +2,6 @@
 data/
 out/
 *.iml
+.gradle/
+build/
+node_modules

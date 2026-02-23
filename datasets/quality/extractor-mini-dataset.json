@@ -1,0 +1,86 @@
+{
+  "samples": [
+    {
+      "id": "react-dom-basic",
+      "framework": "react",
+      "layer": "dom",
+      "input": {
+        "sourceCode": "export const Card = () => (<div role=\"main\"><ul><li>One</li></ul></div>)"
+      },
+      "expected_labels": ["tag:div", "tag:ul", "tag:li", "role:main", "layout:list-vertical"]
+    },
+    {
+      "id": "angular-dom-inline",
+      "framework": "angular",
+      "layer": "dom",
+      "input": {
+        "templateCode": "<section role=\"region\" class=\"grid cards\"><ul><li *ngFor=\"let x of xs\">{{x}}</li></ul></section>"
+      },
+      "expected_labels": ["tag:section", "tag:ul", "tag:li", "role:region", "layout:list-vertical", "layout:grid"]
+    },
+    {
+      "id": "vue-dom-list",
+      "framework": "vue",
+      "layer": "dom",
+      "input": {
+        "templateCode": "<section role=\"main\"><ul><li v-for=\"i in items\">{{i}}</li></ul></section>"
+      },
+      "expected_labels": ["tag:section", "tag:ul", "tag:li", "role:main", "layout:list-vertical"]
+    },
+    {
+      "id": "react-css-basic",
+      "framework": "react",
+      "layer": "css",
+      "input": {
+        "cssCode": ".box{display:flex;flex-direction:row;align-items:center;margin:12px;padding:8px;border-radius:4px;font-size:14px;color:#112233;background:#AABBCC;}"
+      },
+      "expected_labels": ["token:layout:flex", "token:flex:row", "token:align:center", "token:margin", "token:padding", "token:radius", "bucket:sm"]
+    },
+    {
+      "id": "angular-css-basic",
+      "framework": "angular",
+      "layer": "css",
+      "input": {
+        "cssCode": ".card{display:flex;flex-direction:column;margin:10px;padding:6px;font-size:16px;color:#123456;}"
+      },
+      "expected_labels": ["token:layout:flex", "token:flex:col", "token:margin", "token:padding", "bucket:md"]
+    },
+    {
+      "id": "vue-css-basic",
+      "framework": "vue",
+      "layer": "css",
+      "input": {
+        "cssCode": ".item{display:flex;align-items:center;margin:4px;padding:2px;font-size:12px;color:#654321;}"
+      },
+      "expected_labels": ["token:layout:flex", "token:align:center", "token:margin", "token:padding", "bucket:xs"]
+    },
+    {
+      "id": "react-behavior-basic",
+      "framework": "react",
+      "layer": "behavior",
+      "input": {
+        "logicCode": "const [open,setOpen]=useState(false); function onClick(){ if(open){ axios.get('/x') } else { fetch('/y') } setOpen(!open) }"
+      },
+      "expected_labels": ["event:click", "state:localState", "api:axios.get", "api:fetch"]
+    },
+    {
+      "id": "angular-behavior-basic",
+      "framework": "angular",
+      "layer": "behavior",
+      "input": {
+        "logicCode": "function onSubmit(){ if (true) { fetch('/x') } }"
+      },
+      "expected_labels": ["event:submit", "api:fetch"]
+    },
+    {
+      "id": "vue-behavior-basic",
+      "framework": "vue",
+      "layer": "behavior",
+      "input": {
+        "logicCode": "const open = ref(false); function onClick(){ if(open.value){ axios.get('/x') } else { fetch('/y') } }"
+      },
+      "expected_labels": ["event:click", "state:localState", "api:axios.get", "api:fetch"]
+    }
+  ]
+}
+

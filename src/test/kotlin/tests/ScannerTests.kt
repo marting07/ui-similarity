@@ -8,8 +8,10 @@ import scanner.AngularAstRepoScanner
 import scanner.CompositeRepoScanner
 import scanner.NoopReactAstEngine
 import scanner.NoopAngularAstEngine
+import scanner.NoopVueAstEngine
 import scanner.ReactAstRepoScanner
 import scanner.ReactRepoScanner
+import scanner.VueAstRepoScanner
 import scanner.VueRepoScanner
 import tests.TestSupport.assertEquals
 import tests.TestSupport.assertTrue
@@ -90,6 +92,18 @@ object ScannerTests {
                 val repoId = RepoId("github.com", "acme", "sample-angular")
                 val scanner = AngularAstRepoScanner(astEngine = NoopAngularAstEngine, allowFallback = true)
                 val refs = scanner.scanRepo(repoId, Fixtures.angularRepo)
+                assertTrue(refs.isNotEmpty(), "Hybrid mode should fallback to legacy scanner")
+            },
+            TestSupport.test("vue AST scanner strict mode does not fallback when engine unavailable") {
+                val repoId = RepoId("github.com", "acme", "sample-vue")
+                val scanner = VueAstRepoScanner(astEngine = NoopVueAstEngine, allowFallback = false)
+                val refs = scanner.scanRepo(repoId, Fixtures.vueRepo)
+                assertEquals(0, refs.size, "Strict AST mode should not fallback when AST engine is unavailable")
+            },
+            TestSupport.test("vue AST scanner hybrid mode falls back when engine unavailable") {
+                val repoId = RepoId("github.com", "acme", "sample-vue")
+                val scanner = VueAstRepoScanner(astEngine = NoopVueAstEngine, allowFallback = true)
+                val refs = scanner.scanRepo(repoId, Fixtures.vueRepo)
                 assertTrue(refs.isNotEmpty(), "Hybrid mode should fallback to legacy scanner")
             }
         )

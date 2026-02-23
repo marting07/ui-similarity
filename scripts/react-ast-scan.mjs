@@ -34,6 +34,33 @@ function toRelativePosix(root, file) {
   return path.relative(root, file).split(path.sep).join('/');
 }
 
+function parseNamedExportList(tokens, start) {
+  const names = [];
+  let i = start;
+  while (i < tokens.length) {
+    const t = tokens[i];
+    if (!t) break;
+    if (t.type === 'punc' && t.value === '}') return { names, next: i + 1 };
+    if (t.type === 'ident') {
+      const local = t.value;
+      const next = tokens[i + 1];
+      if (next && next.type === 'ident' && next.value === 'as') {
+        const alias = tokens[i + 2];
+        if (alias && alias.type === 'ident') {
+          names.push(alias.value);
+          i += 3;
+          continue;
+        }
+      }
+      names.push(local);
+      i++;
+      continue;
+    }
+    i++;
+  }
+  return { names, next: i };
+}
+
 function stripComments(code) {
   return code
     .replace(/\/\*[\s\S]*?\*\//g, ' ')
@@ -66,34 +93,7 @@ function tokenize(code) {
   return tokens;
 }
 
-function parseNamedExportList(tokens, start) {
-  const names = [];
-  let i = start;
-  while (i < tokens.length) {
-    const t = tokens[i];
-    if (!t) break;
-    if (t.type === 'punc' && t.value === '}') return { names, next: i + 1 };
-    if (t.type === 'ident') {
-      const local = t.value;
-      const next = tokens[i + 1];
-      if (next && next.type === 'ident' && next.value === 'as') {
-        const alias = tokens[i + 2];
-        if (alias && alias.type === 'ident') {
-          names.push(alias.value);
-          i += 3;
-          continue;
-        }
-      }
-      names.push(local);
-      i++;
-      continue;
-    }
-    i++;
-  }
-  return { names, next: i };
-}
-
-function extractExportNames(code) {
+function extractExportNamesTokenizer(code) {
   const tokens = tokenize(stripComments(code));
   const names = new Set();
   let i = 0;
@@ -110,12 +110,13 @@ function extractExportNames(code) {
     const t3 = tokens[i + 3];
 
     if (t1?.type === 'ident' && t1.value === 'default') {
-      if (t2?.type === 'ident' && (t2.value === 'function' || t2.value === 'class')) {
+      if (t2?.type === 'ident' && t2.value === 'function') {
         if (t3?.type === 'ident') names.add(t3.value);
         i += 4;
         continue;
       }
-      if (t2?.type === 'ident') {
+      // Keep parity with legacy scanner: ignore class default exports.
+      if (t2?.type === 'ident' && t2.value !== 'class' && t2.value !== 'function') {
         names.add(t2.value);
         i += 3;
         continue;
@@ -124,15 +125,16 @@ function extractExportNames(code) {
       continue;
     }
 
-    if (t1?.type === 'ident' && (t1.value === 'const' || t1.value === 'function' || t1.value === 'class')) {
+    // Keep parity with legacy scanner: only const/function direct exports.
+    if (t1?.type === 'ident' && (t1.value === 'const' || t1.value === 'function')) {
       if (t2?.type === 'ident') names.add(t2.value);
       i += 3;
       continue;
     }
 
+    // Keep parity with legacy scanner: ignore `export { A as B }` re-export lists.
     if (t1?.type === 'punc' && t1.value === '{') {
       const parsed = parseNamedExportList(tokens, i + 2);
-      for (const name of parsed.names) names.add(name);
       i = parsed.next;
       continue;
     }
@@ -143,7 +145,7 @@ function extractExportNames(code) {
   return Array.from(names);
 }
 
-function extractStyleImports(code, relativePath) {
+function extractStyleImportsTokenizer(code, relativePath) {
   const styles = [];
   const importRegex = /import\s+(?:[^'\"]+from\s+)?['\"]([^'\"]+)['\"]/g;
   let m;
@@ -161,27 +163,125 @@ function extractStyleImports(code, relativePath) {
   return Array.from(new Set(styles));
 }
 
-function scanReactRepo(repoRoot) {
+async function loadTypeScript() {
+  try {
+    const mod = await import('typescript');
+    return mod.default || mod;
+  } catch {
+    return null;
+  }
+}
+
+function extractExportNamesWithTs(ts, code, filePath) {
+  const sourceFile = ts.createSourceFile(
+    filePath,
+    code,
+    ts.ScriptTarget.Latest,
+    true,
+    filePath.endsWith('.tsx') ? ts.ScriptKind.TSX : ts.ScriptKind.JSX
+  );
+
+  const names = new Set();
+
+  for (const stmt of sourceFile.statements) {
+    if (ts.isExportAssignment(stmt) && !stmt.isExportEquals) {
+      // Keep parity with legacy scanner:
+      // - include `export default Name`
+      // - include identifier param for `export default props => ...`
+      if (ts.isIdentifier(stmt.expression)) {
+        names.add(stmt.expression.text);
+      } else if (ts.isArrowFunction(stmt.expression) && stmt.expression.parameters.length > 0) {
+        const first = stmt.expression.parameters[0]?.name;
+        if (first && ts.isIdentifier(first)) names.add(first.text);
+      }
+      continue;
+    }
+
+    if (!stmt.modifiers || !stmt.modifiers.some((m) => m.kind === ts.SyntaxKind.ExportKeyword)) {
+      continue;
+    }
+
+    if (ts.isFunctionDeclaration(stmt)) {
+      if (!stmt.name) continue;
+      names.add(stmt.name.text);
+      continue;
+    }
+
+    if (ts.isVariableStatement(stmt)) {
+      for (const d of stmt.declarationList.declarations) {
+        if (ts.isIdentifier(d.name)) names.add(d.name.text);
+      }
+      continue;
+    }
+
+    // Keep parity with legacy scanner:
+    // - ignore class exports
+    // - ignore export declaration lists (`export { A as B }`)
+  }
+
+  return Array.from(names);
+}
+
+function extractStyleImportsWithTs(ts, code, relativePath, filePath) {
+  const sourceFile = ts.createSourceFile(
+    filePath,
+    code,
+    ts.ScriptTarget.Latest,
+    true,
+    filePath.endsWith('.tsx') ? ts.ScriptKind.TSX : ts.ScriptKind.JSX
+  );
+
+  const styles = new Set();
+  for (const stmt of sourceFile.statements) {
+    if (!ts.isImportDeclaration(stmt)) continue;
+    if (!ts.isStringLiteral(stmt.moduleSpecifier)) continue;
+    const spec = stmt.moduleSpecifier.text;
+    if (!spec.endsWith('.css') && !spec.endsWith('.scss')) continue;
+    if (spec.startsWith('.')) {
+      const baseDir = path.posix.dirname(relativePath);
+      styles.add(path.posix.normalize(path.posix.join(baseDir, spec)));
+    } else {
+      styles.add(spec);
+    }
+  }
+
+  return Array.from(styles);
+}
+
+function buildComponentDescriptors(relativePath, exportNames, stylePaths) {
+  return exportNames.map((exportName) => ({
+    relativePath,
+    exportName,
+    templatePath: relativePath,
+    logicPath: relativePath,
+    stylePaths,
+    inlineTemplateCode: null,
+    inlineStyleCodes: []
+  }));
+}
+
+async function scanReactRepo(repoRoot) {
+  const ts = await loadTypeScript();
   const files = walkFiles(repoRoot);
   const components = [];
+
   for (const file of files) {
     const code = fs.readFileSync(file, 'utf8');
     const relativePath = toRelativePosix(repoRoot, file);
-    const exportNames = extractExportNames(code);
+
+    const exportNames = ts
+      ? extractExportNamesWithTs(ts, code, file)
+      : extractExportNamesTokenizer(code);
+
     if (exportNames.length === 0) continue;
-    const stylePaths = extractStyleImports(code, relativePath);
-    for (const exportName of exportNames) {
-      components.push({
-        relativePath,
-        exportName,
-        templatePath: relativePath,
-        logicPath: relativePath,
-        stylePaths,
-        inlineTemplateCode: null,
-        inlineStyleCodes: []
-      });
-    }
+
+    const stylePaths = ts
+      ? extractStyleImportsWithTs(ts, code, relativePath, file)
+      : extractStyleImportsTokenizer(code, relativePath);
+
+    components.push(...buildComponentDescriptors(relativePath, exportNames, stylePaths));
   }
+
   return components;
 }
 
@@ -195,7 +295,7 @@ async function main() {
       return;
     }
 
-    const components = scanReactRepo(request.repoRoot);
+    const components = await scanReactRepo(request.repoRoot);
     console.log(JSON.stringify({ status: 'ok', components }));
   } catch (error) {
     console.log(JSON.stringify({

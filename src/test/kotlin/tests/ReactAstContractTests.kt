@@ -2,11 +2,13 @@ package tests
 
 import corpus.RepoId
 import scanner.CommandReactAstEngine
+import scanner.AstScanOutcome
 import scanner.ReactAstContractJson
 import scanner.ReactAstScanRequest
 import tests.TestSupport.assertContains
 import tests.TestSupport.assertEquals
 import tests.TestSupport.assertTrue
+import java.nio.file.Files
 
 object ReactAstContractTests {
     fun run(): List<Pair<String, Throwable?>> {
@@ -52,14 +54,14 @@ object ReactAstContractTests {
                 assertTrue(component.inlineTemplateCode?.contains("<div role") == true, "Inline template should decode")
             },
             TestSupport.test("command AST engine maps JSON output to ComponentSourceRef") {
-                val command = "cat <<'JSON'\n{\"status\":\"ok\",\"components\":[{\"relativePath\":\"src/Widget.tsx\",\"exportName\":\"Widget\",\"stylePaths\":[\"src/Widget.css\"]}]}\nJSON"
+                val command = """cat >/dev/null; printf '%s' '{"status":"ok","components":[{"relativePath":"src/Widget.tsx","exportName":"Widget","stylePaths":["src/Widget.css"]}]}'"""
                 val engine = CommandReactAstEngine(command)
                 val refs = engine.scanRepo(
                     RepoId("github.com", "acme", "repo"),
                     Fixtures.reactRepo
                 )
-                assertEquals(1, refs?.size, "Engine should return one mapped source ref")
-                val ref = refs!!.first()
+                assertTrue(refs is AstScanOutcome.Success, "Engine should return success outcome")
+                val ref = (refs as AstScanOutcome.Success).refs.first()
                 assertEquals("Widget", ref.key.exportName, "Export name should map to key")
                 assertEquals("src/Widget.tsx", ref.logicPath.toString().replace('\\', '/'), "Logic path should map")
                 assertEquals(1, ref.stylePaths.size, "Style path list should map")
@@ -70,8 +72,45 @@ object ReactAstContractTests {
                     RepoId("github.com", "acme", "edge-react"),
                     Fixtures.reactEdgeRepo
                 )
-                assertEquals(1, refs?.size, "Node AST command should extract one component")
-                assertEquals("FancyCard", refs?.first()?.key?.exportName, "Default export function name should be parsed")
+                assertTrue(refs is AstScanOutcome.Success, "Node AST command should return success outcome")
+                val components = (refs as AstScanOutcome.Success).refs
+                assertEquals(1, components.size, "Node AST command should extract one component")
+                assertEquals("FancyCard", components.first().key.exportName, "Default export function name should be parsed")
+            },
+            TestSupport.test("real node AST command ignores anonymous default class exports for parity") {
+                val tempRepo = Files.createTempDirectory("react-ast-class-parity")
+                Files.createDirectories(tempRepo.resolve(".git"))
+                Files.writeString(
+                    tempRepo.resolve("App.tsx"),
+                    "export default class extends React.Component { render(){ return <div/> } }"
+                )
+                val engine = CommandReactAstEngine("node scripts/react-ast-scan.mjs")
+                val refs = engine.scanRepo(
+                    RepoId("github.com", "acme", "tmp-react"),
+                    tempRepo
+                )
+                assertTrue(refs is AstScanOutcome.Success, "Node AST command should return success outcome")
+                val components = (refs as AstScanOutcome.Success).refs
+                assertEquals(0, components.size, "Anonymous default class export should be ignored for scanner parity")
+            },
+            TestSupport.test("real node AST command ignores named re-export lists for parity") {
+                val tempRepo = Files.createTempDirectory("react-ast-reexport-parity")
+                Files.createDirectories(tempRepo.resolve(".git"))
+                Files.writeString(
+                    tempRepo.resolve("ThemeProvider.tsx"),
+                    """
+                    function CustomThemeProvider() { return <div /> }
+                    export { CustomThemeProvider as ThemeProvider };
+                    """.trimIndent()
+                )
+                val engine = CommandReactAstEngine("node scripts/react-ast-scan.mjs")
+                val refs = engine.scanRepo(
+                    RepoId("github.com", "acme", "tmp-react"),
+                    tempRepo
+                )
+                assertTrue(refs is AstScanOutcome.Success, "Node AST command should return success outcome")
+                val components = (refs as AstScanOutcome.Success).refs
+                assertEquals(0, components.size, "Named re-export list should be ignored for scanner parity")
             }
         )
     }

@@ -33,6 +33,13 @@ the architecture anticipates an external discovery/cloning step to populate
 
 ## Running
 
+With Gradle (recommended):
+
+```bash
+gradle fastTest
+gradle runPipeline -Pargs="--repos /data/repos --mode hybrid"
+```
+
 If you have Kotlin CLI installed, you can run the compiled classes produced by IntelliJ:
 
 ```bash
@@ -45,6 +52,38 @@ You can also select scanner mode:
 kotlin -classpath out/production/ui-similarity MainKt --repos /data/repos --mode hybrid
 ```
 
+Default mode is now `hybrid` (AST-first with fallback). Use `--mode simple` to force heuristic extraction only.
+
+To write a scanner parity audit report (simple vs AST IDs/counts for React/Angular):
+
+```bash
+kotlin -classpath out/production/ui-similarity MainKt --repos /data/repos --mode hybrid --audit-out out/scanner-parity.csv
+```
+
+To summarize that report and prioritize mismatches:
+
+```bash
+python3 scripts/summarize_scanner_audit.py --input out/scanner-parity.csv --top 15 --output out/scanner-parity-summary.txt
+```
+
+To evaluate scanner/extractor precision-recall on the mini labeled dataset:
+
+```bash
+python3 scripts/evaluate_quality.py --output out/quality-mini-dataset-summary.txt
+```
+
+To benchmark AST extractor helper scripts against runtime budgets:
+
+```bash
+python3 scripts/benchmark_ast_extractors.py --iterations 15 --warmup 3 --budget datasets/quality/benchmark-budget.json --output out/ast-extractor-benchmark-summary.txt
+```
+
+To fail CI/local runs when budget thresholds are exceeded, add:
+
+```bash
+--enforce-budget
+```
+
 Current status: `ast`/`hybrid` mode introduces a React AST scanner adapter scaffold.
 Until a concrete AST engine is wired, it falls back to the existing React scanner path.
 
@@ -54,14 +93,20 @@ The current request/response contract lives in:
 `/Users/marting/Documents/Papers/ui-similarity-project/ui-similarity/src/main/kotlin/scanner/ReactAstContract.kt`.
 For Angular, use `UI_SIMILARITY_ANGULAR_AST_CMD` with the contract in
 `/Users/marting/Documents/Papers/ui-similarity-project/ui-similarity/src/main/kotlin/scanner/AngularAstContract.kt`.
+For Vue, use `UI_SIMILARITY_VUE_AST_CMD` with the contract in
+`/Users/marting/Documents/Papers/ui-similarity-project/ui-similarity/src/main/kotlin/scanner/VueAstContract.kt`.
 
 Default behavior now uses the bundled command:
 `node scripts/react-ast-scan.mjs`.
-This is an offline lightweight parser for React exports/style imports; it is a bridge
-step until full TypeScript AST parser tooling is available.
-Angular uses `node scripts/angular-ast-scan.mjs` with the same bridge approach.
-TODO (when network is available): replace tokenizer logic in `scripts/react-ast-scan.mjs`
-with `typescript` AST parsing, keeping the same JSON contract in
+When the `typescript` package is available, this scanner now uses TypeScript AST parsing
+for export/import resolution; otherwise it falls back to the built-in tokenizer bridge.
+Angular uses `node scripts/angular-ast-scan.mjs`.
+When the `typescript` package is available, this scanner uses TypeScript AST parsing
+for class/decorator/template/style extraction; otherwise it falls back to the regex bridge.
+Vue uses `node scripts/vue-ast-scan.mjs` with the same bridge approach.
+When `@vue/compiler-sfc` is available, the Vue scanner uses SFC compiler parsing for
+template/style block extraction; otherwise it falls back to lightweight regex parsing.
+JSON contract remains unchanged in
 `src/main/kotlin/scanner/ReactAstContract.kt`.
 
 If you only have `java`, add the Kotlin standard library to the classpath:
@@ -102,3 +147,8 @@ CI runs the same command on every push and pull request via
 
 The parser/AST migration plan (architecture, rollout phases, and testing strategy)
 is documented in `/Users/marting/Documents/Papers/ui-similarity-project/ui-similarity/docs/ast-migration-plan.md`.
+
+## CLI + Desktop Roadmap
+
+The experimentation CLI + Kotlin desktop app implementation plan is documented in
+`/Users/marting/Documents/Papers/ui-similarity-project/ui-similarity/docs/experimentation-cli-desktop-plan.md`.

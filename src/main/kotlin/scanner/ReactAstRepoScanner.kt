@@ -7,34 +7,50 @@ import java.nio.file.Path
 
 /**
  * Adapter scaffold for a future parser/AST-based React scanner.
- *
- * For now, this class attempts an AST engine call and falls back to the
- * existing regex scanner implementation so the pipeline remains operational.
  */
 class ReactAstRepoScanner(
     private val astEngine: ReactAstEngine = createDefaultReactAstEngine(),
     private val fallbackScanner: ReactRepoScanner = ReactRepoScanner(),
-    private val allowFallback: Boolean = true
+    private val allowFallback: Boolean = true,
+    private val onAstFailure: ((AstScanFailureEvent) -> Unit)? = null
 ) : FrameworkRepoScanner {
     override val framework: UiFramework = UiFramework.REACT
 
     override fun scanRepo(repoId: RepoId, repoRoot: Path): List<ComponentSourceRef> {
-        val astResult = astEngine.scanRepo(repoId, repoRoot)
-        if (astResult != null) return astResult
-
-        if (!allowFallback) return emptyList()
-        return fallbackScanner.scanRepo(repoId, repoRoot)
+        return when (val result = astEngine.scanRepo(repoId, repoRoot)) {
+            is AstScanOutcome.Success -> result.refs
+            is AstScanOutcome.Failure -> {
+                if (!allowFallback) {
+                    onAstFailure?.invoke(
+                        AstScanFailureEvent(
+                            framework = framework,
+                            repoId = repoId.toString(),
+                            reason = result.reason,
+                            fallbackUsed = false
+                        )
+                    )
+                    emptyList()
+                } else {
+                    onAstFailure?.invoke(
+                        AstScanFailureEvent(
+                            framework = framework,
+                            repoId = repoId.toString(),
+                            reason = result.reason,
+                            fallbackUsed = true
+                        )
+                    )
+                    fallbackScanner.scanRepo(repoId, repoRoot)
+                }
+            }
+        }
     }
 }
 
-/**
- * Returns AST scan results when available; returns null to indicate
- * that the adapter should fallback to the existing scanner path.
- */
 fun interface ReactAstEngine {
-    fun scanRepo(repoId: RepoId, repoRoot: Path): List<ComponentSourceRef>?
+    fun scanRepo(repoId: RepoId, repoRoot: Path): AstScanOutcome
 }
 
 object NoopReactAstEngine : ReactAstEngine {
-    override fun scanRepo(repoId: RepoId, repoRoot: Path): List<ComponentSourceRef>? = null
+    override fun scanRepo(repoId: RepoId, repoRoot: Path): AstScanOutcome =
+        AstScanOutcome.Failure("engine_unavailable")
 }
