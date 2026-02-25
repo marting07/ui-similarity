@@ -16,9 +16,11 @@ object SourceLoader {
      * If a referenced file does not exist it contributes an empty string.
      */
     fun load(sourceRef: ComponentSourceRef): ComponentSource {
-        val template = readFileSafe(sourceRef.absoluteTemplate())
+        val template = sourceRef.inlineTemplateCode ?: readFileSafe(sourceRef.absoluteTemplate())
         // Concatenate all style files into a single string
-        val style = sourceRef.absoluteStyles().joinToString("\n") { readFileSafe(it) }
+        val fileStyles = sourceRef.absoluteStyles().joinToString("\n") { readFileSafe(it) }
+        val inlineStyles = sourceRef.inlineStyleCodes.joinToString("\n")
+        val style = listOf(fileStyles, inlineStyles).filter { it.isNotBlank() }.joinToString("\n")
         val logic = readFileSafe(sourceRef.absoluteLogic())
         return ComponentSource(
             id = sourceRef.key.id,

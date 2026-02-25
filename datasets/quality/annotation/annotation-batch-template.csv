@@ -1,0 +1,3 @@
+query_id,candidate_id,label,confidence,notes
+react/button-primary,vue/button-primary,duplicate,high,same intent and structure
+react/button-primary,react/search-input,different,high,different purpose

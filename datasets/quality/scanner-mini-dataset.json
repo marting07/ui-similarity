@@ -1,0 +1,50 @@
+{
+  "cases": [
+    {
+      "id": "react-sample",
+      "framework": "react",
+      "repo_root": "src/test/resources/fixtures/repos/react/sample-react",
+      "repo_host": "github.com",
+      "repo_owner": "acme",
+      "repo_name": "sample-react",
+      "expected_exports": ["Button"]
+    },
+    {
+      "id": "react-edge-default-export",
+      "framework": "react",
+      "repo_root": "src/test/resources/fixtures/repos/react/edge-react",
+      "repo_host": "github.com",
+      "repo_owner": "acme",
+      "repo_name": "edge-react",
+      "expected_exports": ["FancyCard"]
+    },
+    {
+      "id": "angular-sample",
+      "framework": "angular",
+      "repo_root": "src/test/resources/fixtures/repos/angular/sample-angular",
+      "repo_host": "github.com",
+      "repo_owner": "acme",
+      "repo_name": "sample-angular",
+      "expected_exports": ["AppComponent"]
+    },
+    {
+      "id": "angular-edge-inline",
+      "framework": "angular",
+      "repo_root": "src/test/resources/fixtures/repos/angular/edge-angular",
+      "repo_host": "github.com",
+      "repo_owner": "acme",
+      "repo_name": "edge-angular",
+      "expected_exports": ["FancyCard"]
+    },
+    {
+      "id": "vue-sample",
+      "framework": "vue",
+      "repo_root": "src/test/resources/fixtures/repos/vue/sample-vue",
+      "repo_host": "github.com",
+      "repo_owner": "acme",
+      "repo_name": "sample-vue",
+      "expected_exports": ["HelloCard"]
+    }
+  ]
+}
+

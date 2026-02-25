@@ -1,0 +1,7704 @@
+{
+  "version": "v1-expanded",
+  "description": "Auto-generated retrieval benchmark dataset",
+  "heldout": true,
+  "components": [
+    {
+      "id": "react/datepicker-field-v1-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v2-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "mobile"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v3-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 2,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v4-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v5-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v6-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 2,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v7-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 2,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 2,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v8-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v9-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v10-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 2,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v11-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 2,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v12-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v13-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v14-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v15-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "responsive"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v16-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v17-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "hover"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v18-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v19-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v20-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v21-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 2,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 2,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v22-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 2,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v23-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v24-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v25-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v26-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "focus"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 2,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v27-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 2,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v28-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 2,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v29-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "hover"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v30-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 2,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v31-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v32-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v33-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v34-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v35-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 2,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/datepicker-field-v36-heldout",
+      "framework": "react",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 2,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v1-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v2-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 2,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v3-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v4-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 2,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v5-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v6-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v7-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v8-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 2,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v9-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 2,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v10-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 2,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v11-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "dark"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 2,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v12-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v13-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v14-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "desktop"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v15-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 2,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v16-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v17-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v18-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "dark"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 2,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 2,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v19-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v20-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "light"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 2,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v21-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "mobile"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v22-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v23-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v24-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "light"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v25-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 2,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v26-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v27-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v28-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 2,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v29-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 2,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v30-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 2,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v31-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "focus"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 2,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v32-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v33-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v34-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 2,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v35-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "light"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 2,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/datepicker-field-v36-heldout",
+      "framework": "angular",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v1-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v2-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "hover"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 2,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v3-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v4-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "desktop"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 2,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v5-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 2,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v6-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v7-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v8-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 2,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v9-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "light"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v10-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "light"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 2,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v11-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 2,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v12-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 2,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v13-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v14-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v15-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 2,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v16-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 2,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v17-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "hover"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v18-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "responsive"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v19-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "dark"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 2,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v20-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 2,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v21-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v22-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v23-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "hover"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v24-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 2,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v25-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v26-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "desktop"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 2,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v27-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v28-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v29-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "responsive"
+      ],
+      "dom_tags": {
+        "div": 3,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v30-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "focus"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 2,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v31-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v32-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 2,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 2,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v33-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 1,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v34-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 1
+      },
+      "css_tokens": {
+        "border": 2,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v35-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "focus"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 2,
+        "background": 2
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/datepicker-field-v36-heldout",
+      "framework": "vue",
+      "tokens": [
+        "datepicker",
+        "calendar",
+        "input",
+        "date",
+        "hover"
+      ],
+      "dom_tags": {
+        "div": 2,
+        "input": 1,
+        "button": 2
+      },
+      "css_tokens": {
+        "border": 1,
+        "padding": 1,
+        "background": 1
+      },
+      "behavior_events": [
+        "change",
+        "click"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v1-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 2,
+        "li": 6,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v2-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 4,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v3-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 6,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v4-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 5,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v5-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 6,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v6-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "responsive"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 6,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v7-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "responsive"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 5,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v8-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 2,
+        "li": 6,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v9-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 5,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v10-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 5,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v11-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 2,
+        "li": 6,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v12-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "mobile"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 4,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v13-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "dark"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 2,
+        "li": 5,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v14-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 2,
+        "li": 5,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v15-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 5,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v16-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 6,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v17-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "hover"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 5,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v18-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 6,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v19-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 5,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v20-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 6,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v21-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 2,
+        "li": 6,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v22-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 4,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v23-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 5,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v24-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 5,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v25-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 6,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v26-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "mobile"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 6,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v27-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 5,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v28-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 2,
+        "li": 6,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v29-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 2,
+        "li": 5,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v30-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 6,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v31-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 2,
+        "li": 5,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v32-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "responsive"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 2,
+        "li": 6,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v33-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 2,
+        "li": 6,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v34-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 4,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v35-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 2,
+        "li": 6,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "react/navbar-main-v36-heldout",
+      "framework": "react",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "focus"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 5,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "localState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v1-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 6,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v2-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "responsive"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 4,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v3-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 4,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v4-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 6,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v5-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 4,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v6-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "hover"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 4,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v7-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 4,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v8-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 4,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v9-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "mobile"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 5,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v10-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 5,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v11-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 2,
+        "li": 4,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v12-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 2,
+        "li": 5,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v13-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 5,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v14-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 4,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v15-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 5,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v16-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 4,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v17-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 4,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v18-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 6,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v19-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 5,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v20-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 2,
+        "li": 6,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v21-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 2,
+        "li": 6,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v22-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 4,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v23-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 4,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v24-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 6,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v25-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 5,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v26-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 2,
+        "li": 6,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v27-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 4,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v28-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 4,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v29-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 2,
+        "li": 4,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v30-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "light"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 6,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v31-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 2,
+        "li": 5,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v32-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 2,
+        "li": 6,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v33-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 5,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v34-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 5,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v35-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "desktop"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 2,
+        "li": 6,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "angular/navbar-main-v36-heldout",
+      "framework": "angular",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "desktop"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 5,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "serviceState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v1-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "responsive"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 5,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v2-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 5,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v3-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "focus"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 2,
+        "li": 5,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v4-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "focus"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 6,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v5-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 6,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v6-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "light"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 2,
+        "li": 6,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v7-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 6,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v8-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 2,
+        "li": 5,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v9-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "hover"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 5,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v10-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 5,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v11-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 2,
+        "li": 4,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v12-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 6,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v13-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "hover"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 2,
+        "li": 5,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v14-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 5,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v15-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "dark"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 5,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v16-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "desktop"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 5,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v17-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 2,
+        "li": 6,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v18-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 6,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v19-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "mobile"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 2,
+        "li": 4,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v20-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 6,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v21-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 6,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v22-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "focus"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 5,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v23-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 4,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v24-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 4,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v25-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 2,
+        "li": 6,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 2,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v26-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 4,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v27-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 2,
+        "li": 5,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v28-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "responsive"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 2,
+        "li": 4,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v29-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "light"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 4,
+        "a": 5
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v30-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 5,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v31-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 6,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v32-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 2,
+        "li": 5,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v33-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 6,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 1,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v34-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "mobile"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 5,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 2
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v35-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links"
+      ],
+      "dom_tags": {
+        "nav": 2,
+        "ul": 1,
+        "li": 5,
+        "a": 6
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    },
+    {
+      "id": "vue/navbar-main-v36-heldout",
+      "framework": "vue",
+      "tokens": [
+        "navbar",
+        "navigation",
+        "menu",
+        "links",
+        "desktop"
+      ],
+      "dom_tags": {
+        "nav": 1,
+        "ul": 1,
+        "li": 5,
+        "a": 4
+      },
+      "css_tokens": {
+        "display": 2,
+        "gap": 1,
+        "color": 1
+      },
+      "behavior_events": [
+        "click",
+        "hover"
+      ],
+      "behavior_states": [
+        "refState"
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "query_id": "react/datepicker-field-v15-heldout",
+      "positives": [
+        "angular/datepicker-field-v1-heldout",
+        "angular/datepicker-field-v2-heldout",
+        "angular/datepicker-field-v3-heldout",
+        "angular/datepicker-field-v4-heldout",
+        "angular/datepicker-field-v5-heldout",
+        "angular/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/navbar-main-v28-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/datepicker-field-v26-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/navbar-main-v19-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v1-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/navbar-main-v11-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v6-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/navbar-main-v15-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v14-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/navbar-main-v23-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/datepicker-field-v5-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/navbar-main-v16-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/datepicker-field-v36-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/navbar-main-v29-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v35-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/navbar-main-v2-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v19-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/navbar-main-v9-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/datepicker-field-v36-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/navbar-main-v15-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v12-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/navbar-main-v2-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/datepicker-field-v15-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/navbar-main-v15-heldout"
+      ]
+    },
+    {
+      "query_id": "react/datepicker-field-v14-heldout",
+      "positives": [
+        "angular/datepicker-field-v1-heldout",
+        "angular/datepicker-field-v2-heldout",
+        "angular/datepicker-field-v3-heldout",
+        "angular/datepicker-field-v4-heldout",
+        "angular/datepicker-field-v5-heldout",
+        "angular/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/navbar-main-v21-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v31-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/navbar-main-v16-heldout"
+      ]
+    },
+    {
+      "query_id": "react/datepicker-field-v19-heldout",
+      "positives": [
+        "angular/datepicker-field-v1-heldout",
+        "angular/datepicker-field-v2-heldout",
+        "angular/datepicker-field-v3-heldout",
+        "angular/datepicker-field-v4-heldout",
+        "angular/datepicker-field-v5-heldout",
+        "angular/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/navbar-main-v16-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/datepicker-field-v17-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/navbar-main-v23-heldout"
+      ]
+    },
+    {
+      "query_id": "react/datepicker-field-v22-heldout",
+      "positives": [
+        "angular/datepicker-field-v1-heldout",
+        "angular/datepicker-field-v2-heldout",
+        "angular/datepicker-field-v3-heldout",
+        "angular/datepicker-field-v4-heldout",
+        "angular/datepicker-field-v5-heldout",
+        "angular/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/navbar-main-v11-heldout"
+      ]
+    },
+    {
+      "query_id": "react/datepicker-field-v26-heldout",
+      "positives": [
+        "angular/datepicker-field-v1-heldout",
+        "angular/datepicker-field-v2-heldout",
+        "angular/datepicker-field-v3-heldout",
+        "angular/datepicker-field-v4-heldout",
+        "angular/datepicker-field-v5-heldout",
+        "angular/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/navbar-main-v26-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/datepicker-field-v5-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/navbar-main-v16-heldout"
+      ]
+    },
+    {
+      "query_id": "react/datepicker-field-v30-heldout",
+      "positives": [
+        "angular/datepicker-field-v1-heldout",
+        "angular/datepicker-field-v2-heldout",
+        "angular/datepicker-field-v3-heldout",
+        "angular/datepicker-field-v4-heldout",
+        "angular/datepicker-field-v5-heldout",
+        "angular/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/navbar-main-v21-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v28-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/navbar-main-v26-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/datepicker-field-v20-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/navbar-main-v25-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/datepicker-field-v30-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/navbar-main-v10-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v25-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/navbar-main-v27-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v30-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/navbar-main-v19-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/datepicker-field-v27-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/navbar-main-v14-heldout"
+      ]
+    },
+    {
+      "query_id": "react/datepicker-field-v16-heldout",
+      "positives": [
+        "angular/datepicker-field-v1-heldout",
+        "angular/datepicker-field-v2-heldout",
+        "angular/datepicker-field-v3-heldout",
+        "angular/datepicker-field-v4-heldout",
+        "angular/datepicker-field-v5-heldout",
+        "angular/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/navbar-main-v27-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v28-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/navbar-main-v9-heldout"
+      ]
+    },
+    {
+      "query_id": "react/datepicker-field-v18-heldout",
+      "positives": [
+        "angular/datepicker-field-v1-heldout",
+        "angular/datepicker-field-v2-heldout",
+        "angular/datepicker-field-v3-heldout",
+        "angular/datepicker-field-v4-heldout",
+        "angular/datepicker-field-v5-heldout",
+        "angular/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/navbar-main-v13-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/datepicker-field-v23-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/navbar-main-v35-heldout"
+      ]
+    },
+    {
+      "query_id": "react/datepicker-field-v9-heldout",
+      "positives": [
+        "angular/datepicker-field-v1-heldout",
+        "angular/datepicker-field-v2-heldout",
+        "angular/datepicker-field-v3-heldout",
+        "angular/datepicker-field-v4-heldout",
+        "angular/datepicker-field-v5-heldout",
+        "angular/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/navbar-main-v15-heldout"
+      ]
+    },
+    {
+      "query_id": "react/datepicker-field-v4-heldout",
+      "positives": [
+        "angular/datepicker-field-v1-heldout",
+        "angular/datepicker-field-v2-heldout",
+        "angular/datepicker-field-v3-heldout",
+        "angular/datepicker-field-v4-heldout",
+        "angular/datepicker-field-v5-heldout",
+        "angular/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/navbar-main-v13-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/datepicker-field-v6-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/navbar-main-v20-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v3-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/navbar-main-v26-heldout"
+      ]
+    },
+    {
+      "query_id": "react/datepicker-field-v10-heldout",
+      "positives": [
+        "angular/datepicker-field-v1-heldout",
+        "angular/datepicker-field-v2-heldout",
+        "angular/datepicker-field-v3-heldout",
+        "angular/datepicker-field-v4-heldout",
+        "angular/datepicker-field-v5-heldout",
+        "angular/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/navbar-main-v30-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v24-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/navbar-main-v2-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/datepicker-field-v13-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/navbar-main-v27-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v29-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/navbar-main-v34-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v8-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/navbar-main-v26-heldout"
+      ]
+    },
+    {
+      "query_id": "react/datepicker-field-v5-heldout",
+      "positives": [
+        "angular/datepicker-field-v1-heldout",
+        "angular/datepicker-field-v2-heldout",
+        "angular/datepicker-field-v3-heldout",
+        "angular/datepicker-field-v4-heldout",
+        "angular/datepicker-field-v5-heldout",
+        "angular/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/navbar-main-v16-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v14-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/navbar-main-v5-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v13-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/navbar-main-v23-heldout"
+      ]
+    },
+    {
+      "query_id": "react/datepicker-field-v5-heldout",
+      "positives": [
+        "angular/datepicker-field-v1-heldout",
+        "angular/datepicker-field-v2-heldout",
+        "angular/datepicker-field-v3-heldout",
+        "angular/datepicker-field-v4-heldout",
+        "angular/datepicker-field-v5-heldout",
+        "angular/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/navbar-main-v23-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v36-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/navbar-main-v19-heldout"
+      ]
+    },
+    {
+      "query_id": "react/datepicker-field-v22-heldout",
+      "positives": [
+        "angular/datepicker-field-v1-heldout",
+        "angular/datepicker-field-v2-heldout",
+        "angular/datepicker-field-v3-heldout",
+        "angular/datepicker-field-v4-heldout",
+        "angular/datepicker-field-v5-heldout",
+        "angular/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/navbar-main-v20-heldout"
+      ]
+    },
+    {
+      "query_id": "react/datepicker-field-v18-heldout",
+      "positives": [
+        "angular/datepicker-field-v1-heldout",
+        "angular/datepicker-field-v2-heldout",
+        "angular/datepicker-field-v3-heldout",
+        "angular/datepicker-field-v4-heldout",
+        "angular/datepicker-field-v5-heldout",
+        "angular/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/navbar-main-v20-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v14-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/navbar-main-v26-heldout"
+      ]
+    },
+    {
+      "query_id": "react/datepicker-field-v15-heldout",
+      "positives": [
+        "angular/datepicker-field-v1-heldout",
+        "angular/datepicker-field-v2-heldout",
+        "angular/datepicker-field-v3-heldout",
+        "angular/datepicker-field-v4-heldout",
+        "angular/datepicker-field-v5-heldout",
+        "angular/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/navbar-main-v13-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v35-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/navbar-main-v25-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v36-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/navbar-main-v29-heldout"
+      ]
+    },
+    {
+      "query_id": "react/datepicker-field-v8-heldout",
+      "positives": [
+        "angular/datepicker-field-v1-heldout",
+        "angular/datepicker-field-v2-heldout",
+        "angular/datepicker-field-v3-heldout",
+        "angular/datepicker-field-v4-heldout",
+        "angular/datepicker-field-v5-heldout",
+        "angular/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/navbar-main-v34-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v28-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/navbar-main-v7-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/datepicker-field-v15-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/navbar-main-v27-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v1-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/navbar-main-v8-heldout"
+      ]
+    },
+    {
+      "query_id": "react/datepicker-field-v4-heldout",
+      "positives": [
+        "angular/datepicker-field-v1-heldout",
+        "angular/datepicker-field-v2-heldout",
+        "angular/datepicker-field-v3-heldout",
+        "angular/datepicker-field-v4-heldout",
+        "angular/datepicker-field-v5-heldout",
+        "angular/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/navbar-main-v17-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/datepicker-field-v36-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/navbar-main-v9-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/datepicker-field-v32-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/navbar-main-v26-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/datepicker-field-v9-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/navbar-main-v13-heldout"
+      ]
+    },
+    {
+      "query_id": "react/datepicker-field-v13-heldout",
+      "positives": [
+        "angular/datepicker-field-v1-heldout",
+        "angular/datepicker-field-v2-heldout",
+        "angular/datepicker-field-v3-heldout",
+        "angular/datepicker-field-v4-heldout",
+        "angular/datepicker-field-v5-heldout",
+        "angular/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/navbar-main-v9-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/datepicker-field-v10-heldout",
+      "positives": [
+        "react/datepicker-field-v1-heldout",
+        "react/datepicker-field-v2-heldout",
+        "react/datepicker-field-v3-heldout",
+        "react/datepicker-field-v4-heldout",
+        "react/datepicker-field-v5-heldout",
+        "react/datepicker-field-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/navbar-main-v9-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v8-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/datepicker-field-v32-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v31-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/datepicker-field-v4-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v11-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/datepicker-field-v4-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v15-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/datepicker-field-v22-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v3-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/datepicker-field-v5-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/navbar-main-v23-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/datepicker-field-v1-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/navbar-main-v30-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/datepicker-field-v35-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v3-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/datepicker-field-v4-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v3-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/datepicker-field-v13-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v2-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/datepicker-field-v6-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v2-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/datepicker-field-v32-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/navbar-main-v27-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/datepicker-field-v17-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v15-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/datepicker-field-v8-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/navbar-main-v28-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/datepicker-field-v22-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v7-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/datepicker-field-v11-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/navbar-main-v20-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/datepicker-field-v28-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v10-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/datepicker-field-v36-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/navbar-main-v33-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/datepicker-field-v1-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v34-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/datepicker-field-v3-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v2-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/datepicker-field-v31-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v29-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/datepicker-field-v20-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v3-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/datepicker-field-v4-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/navbar-main-v8-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/datepicker-field-v9-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v1-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/datepicker-field-v19-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v27-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/datepicker-field-v30-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v10-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/datepicker-field-v29-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v31-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/datepicker-field-v20-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v13-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/datepicker-field-v26-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/navbar-main-v18-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/datepicker-field-v33-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v8-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/datepicker-field-v14-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v26-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/datepicker-field-v3-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v9-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/datepicker-field-v2-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/navbar-main-v28-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/datepicker-field-v13-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v34-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/datepicker-field-v35-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v10-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/datepicker-field-v1-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v22-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/datepicker-field-v31-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v26-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/datepicker-field-v24-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v19-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/datepicker-field-v20-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v24-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/datepicker-field-v20-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/navbar-main-v17-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/datepicker-field-v35-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v9-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/datepicker-field-v17-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v35-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/datepicker-field-v11-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v21-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/datepicker-field-v16-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v5-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/datepicker-field-v16-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v31-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/datepicker-field-v20-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v25-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/datepicker-field-v32-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v31-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/datepicker-field-v24-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/navbar-main-v27-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/datepicker-field-v19-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v11-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/datepicker-field-v26-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v21-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/datepicker-field-v18-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v4-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/datepicker-field-v30-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v31-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/datepicker-field-v13-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/navbar-main-v35-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/datepicker-field-v11-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v6-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/datepicker-field-v29-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v3-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/datepicker-field-v11-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/navbar-main-v5-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/datepicker-field-v9-heldout"
+      ]
+    },
+    {
+      "query_id": "angular/navbar-main-v17-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "vue/datepicker-field-v14-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v13-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/datepicker-field-v15-heldout"
+      ]
+    },
+    {
+      "query_id": "vue/navbar-main-v36-heldout",
+      "positives": [
+        "react/navbar-main-v1-heldout",
+        "react/navbar-main-v2-heldout",
+        "react/navbar-main-v3-heldout",
+        "react/navbar-main-v4-heldout",
+        "react/navbar-main-v5-heldout",
+        "react/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "react/datepicker-field-v31-heldout"
+      ]
+    },
+    {
+      "query_id": "react/navbar-main-v15-heldout",
+      "positives": [
+        "angular/navbar-main-v1-heldout",
+        "angular/navbar-main-v2-heldout",
+        "angular/navbar-main-v3-heldout",
+        "angular/navbar-main-v4-heldout",
+        "angular/navbar-main-v5-heldout",
+        "angular/navbar-main-v6-heldout"
+      ],
+      "hard_negatives": [
+        "angular/datepicker-field-v31-heldout"
+      ]
+    }
+  ]
+}
