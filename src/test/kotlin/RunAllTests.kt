@@ -7,11 +7,15 @@ import tests.ExtractorTests
 import tests.CorpusTests
 import tests.HybridModeSmokeTests
 import tests.IndexTests
+import tests.IndexSnapshotIOTests
+import tests.IndexSnapshotCompatibilityTests
 import tests.PipelineSmokeTests
+import tests.ProductionCliTests
 import tests.ReactAstContractTests
 import tests.ReactAstBehaviorExtractorTests
 import tests.ReactAstCssExtractorTests
 import tests.ReactAstDomExtractorTests
+import tests.RepoSamplingServiceTests
 import tests.ScannerAuditSummaryTests
 import tests.ScannerTests
 import tests.SimilarityTests
@@ -44,9 +48,13 @@ fun main() {
         "SourceLoaderTests" to SourceLoaderTests.run(),
         "ExtractorTests" to ExtractorTests.run(),
         "SimilarityTests" to SimilarityTests.run(),
+        "RepoSamplingServiceTests" to RepoSamplingServiceTests.run(),
         "CorpusTests" to CorpusTests.run(),
         "SplitTests" to SplitTests.run(),
         "IndexTests" to IndexTests.run(),
+        "IndexSnapshotIOTests" to IndexSnapshotIOTests.run(),
+        "IndexSnapshotCompatibilityTests" to IndexSnapshotCompatibilityTests.run(),
+        "ProductionCliTests" to ProductionCliTests.run(),
         "PipelineSmokeTests" to PipelineSmokeTests.run()
     )
 

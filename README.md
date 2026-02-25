@@ -36,14 +36,34 @@ the architecture anticipates an external discovery/cloning step to populate
 With Gradle (recommended):
 
 ```bash
-gradle fastTest
-gradle runPipeline -Pargs="--repos /data/repos --mode hybrid"
+./gradlew fastTest
+./gradlew runCli -Pargs="scan-index --repos /data/repos --out out/index.json --mode hybrid"
 ```
 
-If you have Kotlin CLI installed, you can run the compiled classes produced by IntelliJ:
+Production CLI commands:
 
 ```bash
-kotlin -classpath out/production/ui-similarity MainKt --repos /data/repos
+./gradlew runCli -Pargs="inspect --index-file out/index.json"
+./gradlew runCli -Pargs="validate --index-file out/index.json"
+./gradlew runCli -Pargs="query --index-file out/index.json --component-id github.com/org/repo:src/Button.tsx#Button --top-k 10 --top-n 10"
+```
+
+Desktop experimentation app (Compose Desktop):
+
+```bash
+./gradlew :desktop-app:run
+```
+
+Desktop smoke pre-check:
+
+```bash
+bash scripts/smoke_desktop_mvp.sh
+```
+
+Legacy demo pipeline (`Main.kt`) remains available:
+
+```bash
+./gradlew runPipeline -Pargs="--repos /data/repos --mode hybrid"
 ```
 
 You can also select scanner mode:
@@ -82,6 +102,18 @@ To fail CI/local runs when budget thresholds are exceeded, add:
 
 ```bash
 --enforce-budget
+```
+
+To benchmark production CLI runtime budgets on a representative tiny subset:
+
+```bash
+python3 scripts/benchmark_cli_runtime.py --iterations 3 --output out/cli-runtime-benchmark-summary.json
+```
+
+To enforce runtime budget thresholds:
+
+```bash
+python3 scripts/benchmark_cli_runtime.py --iterations 3 --budget datasets/quality/cli-runtime-budget.json --enforce-budget
 ```
 
 Current status: `ast`/`hybrid` mode introduces a React AST scanner adapter scaffold.
@@ -152,3 +184,12 @@ is documented in `/Users/marting/Documents/Papers/ui-similarity-project/ui-simil
 
 The experimentation CLI + Kotlin desktop app implementation plan is documented in
 `/Users/marting/Documents/Papers/ui-similarity-project/ui-similarity/docs/experimentation-cli-desktop-plan.md`.
+
+The production CLI command contract is documented in
+`/Users/marting/Documents/Papers/ui-similarity-project/ui-similarity/docs/production-cli-contract.md`.
+
+Snapshot v2 compatibility/migration policy is documented in
+`/Users/marting/Documents/Papers/ui-similarity-project/ui-similarity/docs/index-snapshot-v2-migration.md`.
+
+Desktop smoke checklist is documented in
+`/Users/marting/Documents/Papers/ui-similarity-project/ui-similarity/docs/desktop-smoke-checklist.md`.

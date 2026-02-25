@@ -12,7 +12,7 @@ kotlin {
 }
 
 application {
-    mainClass.set("MainKt")
+    mainClass.set("cli.SimilarityCliMainKt")
 }
 
 tasks.register<JavaExec>("fastTest") {
@@ -25,7 +25,7 @@ tasks.register<JavaExec>("fastTest") {
 
 tasks.register<JavaExec>("runPipeline") {
     group = "application"
-    description = "Run MainKt. Pass args with --args='--repos /path --mode hybrid'"
+    description = "Run legacy MainKt demo pipeline. Pass args with --args='--repos /path --mode hybrid'"
     dependsOn(tasks.named("classes"))
     classpath = sourceSets["main"].runtimeClasspath
     mainClass.set("MainKt")
@@ -34,6 +34,29 @@ tasks.register<JavaExec>("runPipeline") {
     }
 }
 
+tasks.register<JavaExec>("runCli") {
+    group = "application"
+    description = "Run production CLI entrypoint. Pass args with --args='scan-index --repos ... --out ...'"
+    dependsOn(tasks.named("classes"))
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("cli.SimilarityCliMainKt")
+    if (project.hasProperty("args")) {
+        args = (project.property("args") as String).split(" ").filter { it.isNotBlank() }
+    }
+}
+
+tasks.named<Jar>("jar") {
+    manifest {
+        attributes["Main-Class"] = "cli.SimilarityCliMainKt"
+    }
+}
+
 tasks.named("check") {
     dependsOn("fastTest")
+}
+
+tasks.register("desktopRun") {
+    group = "application"
+    description = "Run Compose Desktop experimentation app"
+    dependsOn(":desktop-app:run")
 }
