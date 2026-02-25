@@ -263,6 +263,9 @@ Use this document as the source of truth for status updates. Add a short "Status
        - CLI top-level failure handling exits cleanly with non-zero status and message.
    - Regression gate status:
      - `scripts/run-tests.sh` passes with `98/98`.
+   - Conference-grade evaluation protocol added:
+     - `docs/similarity-evaluation-protocol.md`
+     - defines benchmark, baselines, metrics, ablations, statistical tests, and acceptance gates.
 2. In-progress:
    - No blockers; remaining work is incremental UX polish and optional scale tuning beyond MVP scope.
 3. Blockers/decisions:

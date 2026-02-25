@@ -193,3 +193,46 @@ Snapshot v2 compatibility/migration policy is documented in
 
 Desktop smoke checklist is documented in
 `/Users/marting/Documents/Papers/ui-similarity-project/ui-similarity/docs/desktop-smoke-checklist.md`.
+
+Conference-grade similarity evaluation protocol is documented in
+`/Users/marting/Documents/Papers/ui-similarity-project/ui-similarity/docs/similarity-evaluation-protocol.md`.
+
+Run the retrieval benchmark starter protocol:
+
+```bash
+python3 scripts/evaluate_retrieval_benchmark.py --dataset datasets/quality/retrieval-benchmark-v1.json --scope all
+python3 scripts/run_similarity_benchmark_matrix.py --dataset datasets/quality/retrieval-benchmark-v1.json --out-dir out/retrieval-benchmark-matrix
+python3 scripts/compare_retrieval_methods.py --summary-json out/retrieval-benchmark-matrix/summary-all.json --method-a proposed_full --method-b random_baseline
+python3 scripts/compute_annotation_agreement.py --annotator-a datasets/quality/annotation/annotation-batch-template.csv --annotator-b datasets/quality/annotation/annotation-batch-template.csv --output out/annotation-agreement.json
+```
+
+Generate expanded Tier B/Tier C benchmark packs and run full matrix:
+
+```bash
+python3 scripts/generate_retrieval_benchmarks.py --seed-dataset datasets/quality/retrieval-benchmark-v1.json --tier-b-out datasets/quality/retrieval-benchmark-tier-b.json --tier-c-out datasets/quality/retrieval-benchmark-tier-c-heldout.json --tier-b-query-target 360 --tier-c-query-target 120 --copies-per-framework 36
+python3 scripts/run_similarity_benchmark_matrix.py --dataset datasets/quality/retrieval-benchmark-tier-b.json --out-dir out/retrieval-benchmark-tier-b-matrix
+python3 scripts/run_similarity_benchmark_matrix.py --dataset datasets/quality/retrieval-benchmark-tier-c-heldout.json --out-dir out/retrieval-benchmark-tier-c-matrix
+```
+
+Annotation workflow utilities:
+
+```bash
+python3 scripts/create_annotation_batches.py --dataset datasets/quality/retrieval-benchmark-tier-b.json --out-dir datasets/quality/annotation --max-pairs-per-query 6
+python3 scripts/simulate_annotations_from_benchmark.py --dataset datasets/quality/retrieval-benchmark-tier-b.json --annotator-a datasets/quality/annotation/retrieval-benchmark-tier-b-annotator-a.csv --annotator-b datasets/quality/annotation/retrieval-benchmark-tier-b-annotator-b.csv
+python3 scripts/compute_annotation_agreement.py --annotator-a datasets/quality/annotation/retrieval-benchmark-tier-b-annotator-a.csv --annotator-b datasets/quality/annotation/retrieval-benchmark-tier-b-annotator-b.csv --output out/annotation-agreement-tier-b.json
+python3 scripts/merge_adjudication_labels.py --annotator-a datasets/quality/annotation/retrieval-benchmark-tier-b-annotator-a.csv --annotator-b datasets/quality/annotation/retrieval-benchmark-tier-b-annotator-b.csv --adjudication datasets/quality/annotation/retrieval-benchmark-tier-b-adjudication.csv --output out/final-labeled-pairs-tier-b.json
+python3 scripts/build_publication_pack.py --name tier-b --output-root out/publication-packs
+```
+
+Automated human-in-the-loop round (minimize manual work to adjudication queue):
+
+```bash
+python3 scripts/automate_annotation_round.py prepare --dataset datasets/quality/retrieval-benchmark-tier-b.json --out-dir datasets/quality/annotation --round-name tier-b-round-1 --max-pairs-per-query 6
+python3 scripts/automate_annotation_round.py process --annotator-a datasets/quality/annotation/tier-b-round-1-annotator-a.csv --annotator-b datasets/quality/annotation/tier-b-round-1-annotator-b.csv --out-dir out/annotation-rounds --round-name tier-b-round-1 --model-score-threshold 0.90
+```
+
+One-command full research round (prepare/process/evaluate/package):
+
+```bash
+python3 scripts/run_full_research_round.py --tier tier-b --round-name tier-b-round-auto --workspace . --simulate-annotations
+```

@@ -1,0 +1,163 @@
+{
+  "version": "v1",
+  "description": "Starter labeled retrieval benchmark for UI component similarity across React/Angular/Vue.",
+  "components": [
+    {
+      "id": "react/button-primary",
+      "framework": "react",
+      "tokens": ["button", "primary", "submit", "cta"],
+      "dom_tags": {"button": 1, "span": 1},
+      "css_tokens": {"color": 1, "padding": 1, "border-radius": 1, "font-weight": 1},
+      "behavior_events": ["click"],
+      "behavior_states": ["localState"]
+    },
+    {
+      "id": "vue/button-primary",
+      "framework": "vue",
+      "tokens": ["button", "primary", "submit", "cta"],
+      "dom_tags": {"button": 1, "span": 1},
+      "css_tokens": {"color": 1, "padding": 1, "border-radius": 1, "font-weight": 1},
+      "behavior_events": ["click"],
+      "behavior_states": ["refState"]
+    },
+    {
+      "id": "angular/button-primary",
+      "framework": "angular",
+      "tokens": ["button", "primary", "submit", "cta"],
+      "dom_tags": {"button": 1, "span": 1},
+      "css_tokens": {"color": 1, "padding": 1, "border-radius": 1},
+      "behavior_events": ["click"],
+      "behavior_states": ["localState"]
+    },
+    {
+      "id": "react/button-primary-v2",
+      "framework": "react",
+      "tokens": ["button", "primary", "submit", "cta"],
+      "dom_tags": {"button": 1, "span": 1},
+      "css_tokens": {"color": 1, "padding": 1, "border-radius": 1, "font-weight": 1},
+      "behavior_events": ["click"],
+      "behavior_states": ["localState"]
+    },
+    {
+      "id": "react/modal-login",
+      "framework": "react",
+      "tokens": ["modal", "login", "dialog", "form"],
+      "dom_tags": {"div": 4, "form": 1, "input": 2, "button": 1},
+      "css_tokens": {"shadow": 1, "padding": 1, "background": 1},
+      "behavior_events": ["click", "submit", "change"],
+      "behavior_states": ["localState"]
+    },
+    {
+      "id": "vue/modal-login",
+      "framework": "vue",
+      "tokens": ["modal", "login", "dialog", "form"],
+      "dom_tags": {"div": 4, "form": 1, "input": 2, "button": 1},
+      "css_tokens": {"shadow": 1, "padding": 1, "background": 1},
+      "behavior_events": ["click", "submit", "change"],
+      "behavior_states": ["refState"]
+    },
+    {
+      "id": "angular/table-report",
+      "framework": "angular",
+      "tokens": ["table", "report", "rows", "columns"],
+      "dom_tags": {"table": 1, "tr": 8, "td": 24, "th": 4},
+      "css_tokens": {"border": 1, "font-size": 1, "padding": 1},
+      "behavior_events": ["click"],
+      "behavior_states": ["serviceState"]
+    },
+    {
+      "id": "react/table-report",
+      "framework": "react",
+      "tokens": ["table", "report", "rows", "columns"],
+      "dom_tags": {"table": 1, "tr": 8, "td": 20, "th": 4},
+      "css_tokens": {"border": 1, "font-size": 1, "padding": 1},
+      "behavior_events": ["click"],
+      "behavior_states": ["localState"]
+    },
+    {
+      "id": "angular/table-report-v2",
+      "framework": "angular",
+      "tokens": ["table", "report", "rows", "columns"],
+      "dom_tags": {"table": 1, "tr": 8, "td": 24, "th": 4},
+      "css_tokens": {"border": 1, "font-size": 1, "padding": 1},
+      "behavior_events": ["click"],
+      "behavior_states": ["serviceState"]
+    },
+    {
+      "id": "react/profile-card",
+      "framework": "react",
+      "tokens": ["profile", "card", "avatar", "bio"],
+      "dom_tags": {"article": 1, "img": 1, "h3": 1, "p": 1},
+      "css_tokens": {"shadow": 1, "border-radius": 1, "padding": 1},
+      "behavior_events": ["click"],
+      "behavior_states": ["none"]
+    },
+    {
+      "id": "vue/navbar-main",
+      "framework": "vue",
+      "tokens": ["navbar", "navigation", "menu", "links"],
+      "dom_tags": {"nav": 1, "ul": 1, "li": 5, "a": 5},
+      "css_tokens": {"display": 1, "gap": 1, "color": 1},
+      "behavior_events": ["click", "hover"],
+      "behavior_states": ["none"]
+    },
+    {
+      "id": "angular/datepicker-field",
+      "framework": "angular",
+      "tokens": ["datepicker", "calendar", "input", "date"],
+      "dom_tags": {"div": 2, "input": 1, "button": 1},
+      "css_tokens": {"border": 1, "padding": 1, "background": 1},
+      "behavior_events": ["click", "change"],
+      "behavior_states": ["serviceState"]
+    },
+    {
+      "id": "react/search-input",
+      "framework": "react",
+      "tokens": ["search", "input", "query", "icon"],
+      "dom_tags": {"div": 1, "input": 1, "svg": 1},
+      "css_tokens": {"border": 1, "padding": 1, "color": 1},
+      "behavior_events": ["change", "keydown"],
+      "behavior_states": ["localState"]
+    },
+    {
+      "id": "vue/search-input",
+      "framework": "vue",
+      "tokens": ["search", "input", "query", "icon"],
+      "dom_tags": {"div": 1, "input": 1, "svg": 1},
+      "css_tokens": {"border": 1, "padding": 1, "color": 1},
+      "behavior_events": ["change", "keydown"],
+      "behavior_states": ["refState"]
+    },
+    {
+      "id": "react/search-input-v2",
+      "framework": "react",
+      "tokens": ["search", "input", "query", "icon"],
+      "dom_tags": {"div": 1, "input": 1, "svg": 1},
+      "css_tokens": {"border": 1, "padding": 1, "color": 1},
+      "behavior_events": ["change", "keydown"],
+      "behavior_states": ["localState"]
+    }
+  ],
+  "queries": [
+    {
+      "query_id": "react/button-primary",
+      "positives": ["react/button-primary-v2", "vue/button-primary", "angular/button-primary"],
+      "hard_negatives": ["react/search-input", "angular/datepicker-field"]
+    },
+    {
+      "query_id": "react/modal-login",
+      "positives": ["vue/modal-login"],
+      "hard_negatives": ["react/profile-card", "angular/datepicker-field"]
+    },
+    {
+      "query_id": "angular/table-report",
+      "positives": ["angular/table-report-v2", "react/table-report"],
+      "hard_negatives": ["vue/navbar-main", "react/profile-card"]
+    },
+    {
+      "query_id": "react/search-input",
+      "positives": ["react/search-input-v2", "vue/search-input"],
+      "hard_negatives": ["angular/datepicker-field", "react/button-primary"]
+    }
+  ]
+}
